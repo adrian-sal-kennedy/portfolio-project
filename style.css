@@ -6,7 +6,7 @@
 
 h1 {
   font-family: "Sancreek", serif;
-  color: #ffebcb;
+  color: papayawhip;
   transform: scale(1, 0.5);
   text-transform: uppercase;
   text-align: center;
@@ -25,7 +25,7 @@ h2 {
 
 .container {
   display: flex;
-  background: burlywood;
+  background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
   width: 100vw;
   min-height: 100vh;
   flex-direction: column;
@@ -35,7 +35,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #d83b2c;
+  background: linear-gradient(90deg, #b83125 0%, #d83b2c 33%, #d83b2c 67%, #b83125 100%);
   outline: solid 0.8rem black;
   outline-offset: -0.8em;
   width: 80vw;
@@ -66,6 +66,8 @@ h2 {
 }
 .container .footer .button {
   margin: 0.5em 1em;
+  background: papayawhip;
+  box-shadow: 0px 0px 30px 30px papayawhip;
 }
 
 /*# sourceMappingURL=style.css.map */
