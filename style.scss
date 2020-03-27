@@ -1,5 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text&family=Sancreek&display=swap');
+
 * {
-  background: darkslategray;
   font-family: Arial, Helvetica, sans-serif;
-  color: lightsalmon;
+  color: black;
+}
+
+h1 {
+  font-family: 'Sancreek', cursive;
+  color: white;
+  transform: scale(2,1);
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  text-shadow: 3px 3px 12px rgba(0,0,0,0.25);
+}
+
+.container {
+  display: flex;
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;;
+  .skewbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    border: solid 0.8rem black;
+    height: 200px;
+    width: 80vw;
+    margin: 1em;
+    box-shadow: 3px 3px 12px rgba(0,0,0,0.25);
+  }
+  .skewleft {
+    transform: skew(4deg, 0deg);
+    div {
+      transform: skew(-4deg, 0deg);
+    }
+  }
+  .skewright {
+    transform: skew(-4deg, 0deg);
+    div {
+      transform: skew(4deg, 0deg);
+    }
+  }
 }
