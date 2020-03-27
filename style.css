@@ -28,6 +28,7 @@ h2 {
   background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
   width: 100vw;
   min-height: 100vh;
+  min-width: 540px;
   flex-direction: column;
   align-items: center;
 }
@@ -39,10 +40,13 @@ h2 {
   outline: solid 0.8rem black;
   outline-offset: -0.8em;
   width: 80vw;
+  min-width: 540px;
   margin-top: 1rem;
   box-shadow: inset 3px 3px 12px rgba(0, 0, 0, 0.25), 3px 3px 12px rgba(0, 0, 0, 0.25);
   transform: skew(4deg, 0deg);
   margin-left: 10px;
+  transition: 0.08s;
+  animation-timing-function: ease-out;
 }
 .container .skewbox div {
   margin-left: 3em;
@@ -55,6 +59,11 @@ h2 {
 }
 .container .skewbox:nth-of-type(2n) div {
   transform: skew(4deg, 0deg);
+}
+.container .skewbox:hover {
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  margin-bottom: -0.75rem;
 }
 .container .footer {
   display: flex;
