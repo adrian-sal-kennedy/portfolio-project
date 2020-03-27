@@ -7,7 +7,7 @@
 
 h1 {
   font-family: "Sancreek", cursive;
-  color: white;
+  color: #ffd899;
   transform: scale(1, 0.5);
   text-transform: uppercase;
   text-align: center;
@@ -18,7 +18,7 @@ h1 {
 
 .container {
   display: flex;
-  background: white;
+  background: burlywood;
   width: 100vw;
   height: 100vh;
   flex-direction: column;
@@ -28,12 +28,12 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: red;
+  background: #d83b2c;
   outline: solid 0.8rem black;
   outline-offset: -0.8em;
   width: 80vw;
   margin: 0.5em;
-  box-shadow: inset 3px 3px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 3px 3px 12px rgba(0, 0, 0, 0.25), 3px 3px 12px rgba(0, 0, 0, 0.25);
   transform: skew(4deg, 0deg);
   margin-left: 10px;
 }
