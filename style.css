@@ -2,14 +2,16 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
   color: black;
+  margin: 0;
 }
 
 h1 {
   font-family: "Sancreek", cursive;
   color: white;
-  transform: scale(2, 1);
+  transform: scale(1, 0.5);
   text-transform: uppercase;
-  font-size: 3rem;
+  text-align: center;
+  font-size: 6rem;
   letter-spacing: 0.05em;
   text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
 }
@@ -27,18 +29,21 @@ h1 {
   align-items: center;
   justify-content: center;
   background: red;
-  border: solid 0.8rem black;
-  height: 200px;
+  outline: solid 0.8rem black;
+  outline-offset: -0.8em;
   width: 80vw;
   margin: 0.5em;
-  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 3px 3px 12px rgba(0, 0, 0, 0.25);
   transform: skew(4deg, 0deg);
+  margin-left: 10px;
 }
 .container .skewbox div {
+  margin: 0 3em;
   transform: skew(-4deg, 0deg);
 }
 .container .skewbox:nth-of-type(2n) {
   transform: skew(-4deg, 0deg);
+  margin-left: -10px;
 }
 .container .skewbox:nth-of-type(2n) div {
   transform: skew(4deg, 0deg);
