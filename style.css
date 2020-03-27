@@ -30,19 +30,17 @@ h1 {
   border: solid 0.8rem black;
   height: 200px;
   width: 80vw;
-  margin: 1em;
+  margin: 0.5em;
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
-}
-.container .skewleft {
   transform: skew(4deg, 0deg);
 }
-.container .skewleft div {
+.container .skewbox div {
   transform: skew(-4deg, 0deg);
 }
-.container .skewright {
+.container .skewbox:nth-of-type(2n) {
   transform: skew(-4deg, 0deg);
 }
-.container .skewright div {
+.container .skewbox:nth-of-type(2n) div {
   transform: skew(4deg, 0deg);
 }
 

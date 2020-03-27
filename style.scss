@@ -30,19 +30,29 @@ h1 {
     border: solid 0.8rem black;
     height: 200px;
     width: 80vw;
-    margin: 1em;
+    margin: .5em;
     box-shadow: 3px 3px 12px rgba(0,0,0,0.25);
-  }
-  .skewleft {
     transform: skew(4deg, 0deg);
     div {
       transform: skew(-4deg, 0deg);
     }
   }
-  .skewright {
+  .skewbox:nth-of-type(2n) {
     transform: skew(-4deg, 0deg);
     div {
       transform: skew(4deg, 0deg);
     }
   }
+  // .skewleft {
+  //   transform: skew(4deg, 0deg);
+  //   div {
+  //     transform: skew(-4deg, 0deg);
+  //   }
+  // }
+  // .skewright {
+  //   transform: skew(-4deg, 0deg);
+  //   div {
+  //     transform: skew(4deg, 0deg);
+  //   }
+  // }
 }
