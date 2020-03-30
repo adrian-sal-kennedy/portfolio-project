@@ -30,7 +30,7 @@ h2 {
   background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
   width: 100vw;
   min-height: 100vh;
-  min-width: 384px;
+  min-width: 360px;
   flex-direction: column;
   align-items: center;
   perspective: 200rem;

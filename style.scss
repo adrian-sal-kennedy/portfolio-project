@@ -3,10 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Six+Caps');
 
 $media-tablet: 768px;
-$media-phone: 414px;
+$media-phone: 360px;
 // Averia serif libre - h1, main sections
 // sancreek - noodly cheezy old west slab-serif - h2, buttons etc
 // Six Caps - tall movie font for landscape windows - h1
+
+@mixin orientationer {
+  
+}
 
 * {
   margin: 0;
@@ -37,7 +41,8 @@ h2 {
   background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
   width: 100vw;
   min-height: 100vh;
-  min-width: 384px;
+  // min-width: 384px;
+  min-width: $media-phone;
   flex-direction: column;
   align-items: center;
   perspective: 200rem;
@@ -49,7 +54,6 @@ h2 {
     outline: solid 0.8rem black;
     outline-offset: -0.8em;
     width: 80%;
-    // min-width: 380px;
     margin-top: 1rem;
     box-shadow: inset 3px 3px 12px rgba(0,0,0,0.25), 3px 3px 12px rgba(0,0,0,0.25);
     transform: skew(4deg, 0deg);
