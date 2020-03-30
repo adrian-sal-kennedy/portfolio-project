@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Sancreek");
-@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700");
+@import url("https://fonts.googleapis.com/css2?family=Six+Caps");
 * {
   margin: 0;
+  font-size: 10px;
 }
 
 h1 {
@@ -28,19 +30,19 @@ h2 {
   background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
   width: 100vw;
   min-height: 100vh;
-  min-width: 540px;
+  min-width: 384px;
   flex-direction: column;
   align-items: center;
+  perspective: 200rem;
 }
-.container .skewbox {
+.container .skewbox, .container .skewbox-title {
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(90deg, #b83125 0%, #d83b2c 33%, #d83b2c 67%, #b83125 100%);
   outline: solid 0.8rem black;
   outline-offset: -0.8em;
-  width: 80vw;
-  min-width: 540px;
+  width: 80%;
   margin-top: 1rem;
   box-shadow: inset 3px 3px 12px rgba(0, 0, 0, 0.25), 3px 3px 12px rgba(0, 0, 0, 0.25);
   transform: skew(4deg, 0deg);
@@ -48,22 +50,41 @@ h2 {
   transition: 0.08s;
   animation-timing-function: ease-out;
 }
-.container .skewbox div {
+.container .skewbox div, .container .skewbox-title div {
   margin-left: 3em;
   margin-right: 3em;
   transform: skew(-4deg, 0deg);
 }
-.container .skewbox:nth-of-type(2n) {
+.container .skewbox:hover, .container .skewbox-title:hover {
+  padding: 0.67rem;
+  margin-top: 0.33rem;
+  margin-bottom: -0.75rem;
+}
+.container .skewbox-title {
+  width: 95%;
+  margin: 0;
+  margin-bottom: -0.8rem;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  transition: initial;
+  animation-timing-function: initial;
+}
+.container .skewbox-title div {
+  margin-left: 3em;
+  margin-right: 3em;
+  transform: skew(0deg, 0deg);
+}
+.container .skewbox-title:hover {
+  padding: initial;
+  margin-top: inherit;
+  margin-bottom: -0.8rem;
+}
+.container .skewbox:nth-of-type(2n), .container .skewbox-title:nth-of-type(2n) {
   transform: skew(-4deg, 0deg);
   margin-left: -10px;
 }
-.container .skewbox:nth-of-type(2n) div {
+.container .skewbox:nth-of-type(2n) div, .container .skewbox-title:nth-of-type(2n) div {
   transform: skew(4deg, 0deg);
-}
-.container .skewbox:hover {
-  padding: 0.75rem;
-  margin-top: 0.25rem;
-  margin-bottom: -0.75rem;
 }
 .container .footer {
   display: flex;
@@ -75,9 +96,12 @@ h2 {
   text-decoration: none;
 }
 .container .footer .button {
-  margin: 0.5em 1em;
+  margin: 0.5rem 1rem;
   background: papayawhip;
   box-shadow: 0px 0px 30px 30px papayawhip;
+}
+.container .footer .button:hover {
+  font-size: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
