@@ -38,7 +38,7 @@ h2 {
 .container .skewbox, .container .skewbox-title {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background: linear-gradient(90deg, #b83125 0%, #d83b2c 33%, #d83b2c 67%, #b83125 100%);
   outline: solid 0.8rem black;
   outline-offset: -0.8em;
@@ -59,18 +59,6 @@ h2 {
   padding: 0.67rem;
   margin-top: 0.33rem;
   margin-bottom: -0.75rem;
-}
-.container .skewbox:nth-child(2n of .pic-bg), .container .skewbox-title:nth-child(2n of .pic-bg) {
-  order: 1;
-}
-.container .skewbox:nth-child(3n-2 of .pic-bg), .container .skewbox-title:nth-child(3n-2 of .pic-bg) {
-  background-image: url("assets/il-buono.svg");
-}
-.container .skewbox:nth-child(3n-1 of .pic-bg), .container .skewbox-title:nth-child(3n-1 of .pic-bg) {
-  background-image: url("assets/il-brutto.svg");
-}
-.container .skewbox:nth-child(3n of .pic-bg), .container .skewbox-title:nth-child(3n of .pic-bg) {
-  background-image: url("assets/il-cattivo.svg");
 }
 .container .skewbox-title {
   width: 95%;
@@ -119,24 +107,29 @@ h2 {
   font-size: 3rem;
 }
 
-.pic-bg {
-  min-width: 225px;
-  min-height: 225px;
+.skewbox-pic {
+  min-width: 200px;
+  flex-grow: 0;
+  min-height: 200px;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   order: 0;
 }
 
-.skewbox:nth-child(2n) .pic-bg, .container .skewbox-title:nth-child(2n) .pic-bg {
+.skewbox-link {
+  flex-grow: 1;
+}
+
+.skewbox:nth-child(2n) .skewbox-pic, .container .skewbox-title:nth-child(2n) .skewbox-pic {
   order: 1;
 }
-.skewbox:nth-child(3n-2) .pic-bg, .container .skewbox-title:nth-child(3n-2) .pic-bg {
+.skewbox:nth-child(3n-2) .skewbox-pic, .container .skewbox-title:nth-child(3n-2) .skewbox-pic {
   background-image: url("assets/il-buono.svg");
 }
-.skewbox:nth-child(3n-1) .pic-bg, .container .skewbox-title:nth-child(3n-1) .pic-bg {
+.skewbox:nth-child(3n-1) .skewbox-pic, .container .skewbox-title:nth-child(3n-1) .skewbox-pic {
   background-image: url("assets/il-brutto.svg");
 }
-.skewbox:nth-child(3n) .pic-bg, .container .skewbox-title:nth-child(3n) .pic-bg {
+.skewbox:nth-child(3n) .skewbox-pic, .container .skewbox-title:nth-child(3n) .skewbox-pic {
   background-image: url("assets/il-cattivo.svg");
 }
 

@@ -1,7 +1,7 @@
 .skewbox {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background: linear-gradient(90deg, rgb(184, 49, 37) 0%, rgb(216, 59, 44) 33%, rgb(216, 59, 44) 67%, rgb(184, 49, 37) 100%);
   outline: solid 0.8rem black;
   outline-offset: -0.8em;
@@ -21,17 +21,5 @@
     padding: 0.67rem;
     margin-top: 0.33rem;
     margin-bottom: -0.75rem;
-  }
-  &:nth-child(2n of .pic-bg) {
-    order: 1;
-  }
-  &:nth-child(3n-2 of .pic-bg) {
-    background-image: url("assets/il-buono.svg");
-  }
-  &:nth-child(3n-1 of .pic-bg) {
-    background-image: url("assets/il-brutto.svg");
-  }
-  &:nth-child(3n of .pic-bg) {
-    background-image: url("assets/il-cattivo.svg");
   }
 }

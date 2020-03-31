@@ -13,26 +13,29 @@ $skew-degrees: 4deg;
 @import "css/portrait";
 // @import "css/landscape";
 
-.pic-bg {
-  // background-color: rgba(0,0,0,0.25);
-  min-width: 225px;
-  min-height: 225px;
+.skewbox-pic {
+  min-width: 200px;
+  flex-grow: 0;
+  min-height: 200px;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   order: 0;
+}
+.skewbox-link {
+  flex-grow: 1;
 }
 
 .skewbox {
-  &:nth-child(2n) .pic-bg {
+  &:nth-child(2n) .skewbox-pic {
   order: 1;
   }
-  &:nth-child(3n-2) .pic-bg {
+  &:nth-child(3n-2) .skewbox-pic {
     background-image: url("assets/il-buono.svg");
   }
-  &:nth-child(3n-1) .pic-bg {
+  &:nth-child(3n-1) .skewbox-pic {
     background-image: url("assets/il-brutto.svg");
   }
-  &:nth-child(3n) .pic-bg {
+  &:nth-child(3n) .skewbox-pic {
     background-image: url("assets/il-cattivo.svg");
   }
 }
