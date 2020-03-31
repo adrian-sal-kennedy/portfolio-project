@@ -1,0 +1,24 @@
+.skewbox-title{
+  @extend .skewbox;
+  width: 95%;
+  margin:0;
+  margin-bottom: -0.8rem;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  transition: initial;
+  animation-timing-function: initial;
+  div {
+    margin-left: 3em;
+    margin-right: 3em;
+    transform: skew(0deg, 0deg);
+    //  rotateX(30deg);
+  }
+  h1 {
+    font-size: 7.5rem;
+  }
+  &:hover {
+    padding: initial;
+    margin-top: inherit;
+    margin-bottom: -0.8rem;
+  }
+}
