@@ -60,6 +60,18 @@ h2 {
   margin-top: 0.33rem;
   margin-bottom: -0.75rem;
 }
+.container .skewbox:nth-child(2n of .pic-bg), .container .skewbox-title:nth-child(2n of .pic-bg) {
+  order: 1;
+}
+.container .skewbox:nth-child(3n-2 of .pic-bg), .container .skewbox-title:nth-child(3n-2 of .pic-bg) {
+  background-image: url("assets/il-buono.svg");
+}
+.container .skewbox:nth-child(3n-1 of .pic-bg), .container .skewbox-title:nth-child(3n-1 of .pic-bg) {
+  background-image: url("assets/il-brutto.svg");
+}
+.container .skewbox:nth-child(3n of .pic-bg), .container .skewbox-title:nth-child(3n of .pic-bg) {
+  background-image: url("assets/il-cattivo.svg");
+}
 .container .skewbox-title {
   width: 95%;
   margin: 0;
@@ -73,6 +85,9 @@ h2 {
   margin-left: 3em;
   margin-right: 3em;
   transform: skew(0deg, 0deg);
+}
+.container .skewbox-title h1 {
+  font-size: 7.5rem;
 }
 .container .skewbox-title:hover {
   padding: initial;
@@ -102,6 +117,27 @@ h2 {
 }
 .container .footer .button:hover {
   font-size: 3rem;
+}
+
+.pic-bg {
+  min-width: 225px;
+  min-height: 225px;
+  background-position: center;
+  background-size: cover;
+  order: 0;
+}
+
+.skewbox:nth-child(2n) .pic-bg, .container .skewbox-title:nth-child(2n) .pic-bg {
+  order: 1;
+}
+.skewbox:nth-child(3n-2) .pic-bg, .container .skewbox-title:nth-child(3n-2) .pic-bg {
+  background-image: url("assets/il-buono.svg");
+}
+.skewbox:nth-child(3n-1) .pic-bg, .container .skewbox-title:nth-child(3n-1) .pic-bg {
+  background-image: url("assets/il-brutto.svg");
+}
+.skewbox:nth-child(3n) .pic-bg, .container .skewbox-title:nth-child(3n) .pic-bg {
+  background-image: url("assets/il-cattivo.svg");
 }
 
 /*# sourceMappingURL=style.css.map */

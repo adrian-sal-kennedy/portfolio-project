@@ -4,129 +4,36 @@
 
 $media-tablet: 768px;
 $media-phone: 360px;
+
+$skew-degrees: 4deg;
 // Averia serif libre - h1, main sections
 // sancreek - noodly cheezy old west slab-serif - h2, buttons etc
 // Six Caps - tall movie font for landscape windows - h1
 
-@mixin orientationer {
-  
+@import "css/portrait";
+// @import "css/landscape";
+
+.pic-bg {
+  // background-color: rgba(0,0,0,0.25);
+  min-width: 225px;
+  min-height: 225px;
+  background-position: center;
+  background-size: cover;
+  order: 0;
 }
 
-* {
-  margin: 0;
-  font-size: 10px;
-}
-
-h1 {
-  font-family: 'Sancreek', serif;
-  color: papayawhip;
-  transform: scale(1,0.5);
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 6rem;
-  letter-spacing: 0.05em;
-  text-shadow: 3px 3px 12px rgba(0,0,0,0.25);
-}
-
-h2 {
-  font-family: 'Averia Serif Libre', serif;
-  font-size: 2rem;
-  color: firebrick;
-  text-transform: uppercase;
-  text-shadow: 3px 3px 8px rgba(0,0,0,0.1);
-}
-
-.container {
-  display: flex;
-  background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
-  width: 100vw;
-  min-height: 100vh;
-  // min-width: 384px;
-  min-width: $media-phone;
-  flex-direction: column;
-  align-items: center;
-  perspective: 200rem;
-  .skewbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(90deg, rgb(184, 49, 37) 0%, rgb(216, 59, 44) 33%, rgb(216, 59, 44) 67%, rgb(184, 49, 37) 100%);
-    outline: solid 0.8rem black;
-    outline-offset: -0.8em;
-    width: 80%;
-    margin-top: 1rem;
-    box-shadow: inset 3px 3px 12px rgba(0,0,0,0.25), 3px 3px 12px rgba(0,0,0,0.25);
-    transform: skew(4deg, 0deg);
-    margin-left: 10px;
-    transition: 0.08s;
-    animation-timing-function: ease-out;
-    div {
-      margin-left: 3em;
-      margin-right: 3em;
-      transform: skew(-4deg, 0deg);
-    }
-    // &:nth-of-type(2n) {
-    //   transform: skew(-4deg, 0deg);
-    //   margin-left: -20px;
-    //   div {
-    //     transform: skew(4deg, 0deg);
-    //   }
-    // }
-    &:hover {
-      padding: 0.67rem;
-      margin-top: 0.33rem;
-      margin-bottom: -0.75rem;
-    }
+.skewbox {
+  &:nth-child(2n) .pic-bg {
+  order: 1;
   }
-  .skewbox-title{
-    @extend .skewbox;
-    width: 95%;
-    margin:0;
-    margin-bottom: -0.8rem;
-    // transform: skew(0);
-    transform-style: preserve-3d;
-    transform: rotateX(-30deg);
-    transition: initial;
-    animation-timing-function: initial;
-    div {
-      margin-left: 3em;
-      margin-right: 3em;
-      transform: skew(0deg, 0deg);
-      //  rotateX(30deg);
-    }
-    &:hover {
-      padding: initial;
-      margin-top: inherit;
-      margin-bottom: -0.8rem;
-    }
+  &:nth-child(3n-2) .pic-bg {
+    background-image: url("assets/il-buono.svg");
   }
-  .skewbox:nth-of-type(2n) {
-    transform: skew(-4deg, 0deg);
-    margin-left: -10px;
-    div {
-      transform: skew(4deg, 0deg);
-    }
+  &:nth-child(3n-1) .pic-bg {
+    background-image: url("assets/il-brutto.svg");
   }
-  // .skewbox:hover {
-  //   padding: 0.75rem;
-  //   margin-top: 0.25rem;
-  //   margin-bottom: -0.75rem;
-  // }
-  .footer {
-    display: flex;
-    width: 80vw;
-    justify-content: space-around;
-    margin-top: auto;
-    a {
-      text-decoration: none;
-    }
-    .button {
-      margin: 0.5rem 1rem;
-      background: papayawhip;
-      box-shadow: 0px 0px 30px 30px papayawhip;
-    }
-    .button:hover {
-      font-size: 3rem;
-    }
+  &:nth-child(3n) .pic-bg {
+    background-image: url("assets/il-cattivo.svg");
   }
 }
+  // background-image: url("assets/il-buono.svg");
