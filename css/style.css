@@ -27,9 +27,7 @@ h2 {
 
 .container {
   display: flex;
-  background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
   width: 100vw;
-  min-height: 100vh;
   min-width: 360px;
   flex-direction: column;
   align-items: center;
@@ -107,6 +105,34 @@ h2 {
   font-size: 3rem;
 }
 
+.skewbox-title {
+  width: 95%;
+  margin: 0;
+  margin-bottom: -0.8rem;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  transition: initial;
+  animation-timing-function: initial;
+}
+.skewbox-title div {
+  margin-left: 3em;
+  margin-right: 3em;
+  transform: skew(0deg, 0deg);
+}
+.skewbox-title h1 {
+  font-size: 7.5rem;
+}
+.skewbox-title:hover {
+  padding: initial;
+  margin-top: inherit;
+  margin-bottom: -0.8rem;
+}
+
+.outer {
+  min-height: 100vh;
+  background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
+}
+
 .skewbox-pic {
   min-width: 200px;
   flex-grow: 0;
@@ -120,17 +146,17 @@ h2 {
   flex-grow: 1;
 }
 
-.skewbox:nth-child(2n) .skewbox-pic, .container .skewbox-title:nth-child(2n) .skewbox-pic {
+.skewbox:nth-child(2n) .skewbox-pic, .skewbox-title:nth-child(2n) .skewbox-pic {
   order: 1;
 }
-.skewbox:nth-child(3n-2) .skewbox-pic, .container .skewbox-title:nth-child(3n-2) .skewbox-pic {
-  background-image: url("assets/il-buono.svg");
+.skewbox:nth-child(3n-2) .skewbox-pic, .skewbox-title:nth-child(3n-2) .skewbox-pic {
+  background-image: url("../assets/il-buono.svg");
 }
-.skewbox:nth-child(3n-1) .skewbox-pic, .container .skewbox-title:nth-child(3n-1) .skewbox-pic {
-  background-image: url("assets/il-brutto.svg");
+.skewbox:nth-child(3n-1) .skewbox-pic, .skewbox-title:nth-child(3n-1) .skewbox-pic {
+  background-image: url("../assets/il-brutto.svg");
 }
-.skewbox:nth-child(3n) .skewbox-pic, .container .skewbox-title:nth-child(3n) .skewbox-pic {
-  background-image: url("assets/il-cattivo.svg");
+.skewbox:nth-child(3n) .skewbox-pic, .skewbox-title:nth-child(3n) .skewbox-pic {
+  background-image: url("../assets/il-cattivo.svg");
 }
 
 /*# sourceMappingURL=style.css.map */

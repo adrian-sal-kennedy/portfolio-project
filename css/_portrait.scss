@@ -25,9 +25,7 @@ h2 {
 
 .container {
   display: flex;
-  background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
   width: 100vw;
-  min-height: 100vh;
   // min-width: 384px;
   min-width: $media-phone;
   flex-direction: column;

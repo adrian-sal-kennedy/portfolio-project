@@ -10,8 +10,15 @@ $skew-degrees: 4deg;
 // sancreek - noodly cheezy old west slab-serif - h2, buttons etc
 // Six Caps - tall movie font for landscape windows - h1
 
-@import "css/portrait";
-// @import "css/landscape";
+@import "portrait";
+// @import "landscape";
+
+@import "skewbox-title";
+
+.outer {
+  min-height: 100vh;
+  background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
+}
 
 .skewbox-pic {
   min-width: 200px;
@@ -30,13 +37,13 @@ $skew-degrees: 4deg;
   order: 1;
   }
   &:nth-child(3n-2) .skewbox-pic {
-    background-image: url("assets/il-buono.svg");
+    background-image: url("../assets/il-buono.svg");
   }
   &:nth-child(3n-1) .skewbox-pic {
-    background-image: url("assets/il-brutto.svg");
+    background-image: url("../assets/il-brutto.svg");
   }
   &:nth-child(3n) .skewbox-pic {
-    background-image: url("assets/il-cattivo.svg");
+    background-image: url("../assets/il-cattivo.svg");
   }
 }
   // background-image: url("assets/il-buono.svg");
