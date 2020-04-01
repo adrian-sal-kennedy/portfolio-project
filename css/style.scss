@@ -7,13 +7,30 @@ $media-phone: 360px;
 
 $skew-degrees: 4deg;
 
+$root-font-size: 10px;
+
 // Averia serif libre - h1, main sections
 // sancreek - noodly cheezy old west slab-serif - h2, buttons etc
 // Six Caps - tall movie font for landscape windows - h1
 
 * {
-  margin: 0;
   font-size: 10px;
+  @media (min-resolution: 96dpi) { 
+    font-size: 10px;
+  }
+  @media (min-resolution: 166dpi) {
+    // my own screen - 1080p at 13.3" wide.
+    font-size: 10px;
+  }
+  @media (min-resolution: 192dpi) { 
+    font-size: 5px;
+  }
+  @media (min-resolution: 469dpi) { 
+    // my phone - 4.7" 1080p
+    font-size: 5px;
+  }
+  
+  margin: 0;
 }
 
 h1 {

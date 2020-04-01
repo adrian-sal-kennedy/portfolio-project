@@ -2,8 +2,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700");
 @import url("https://fonts.googleapis.com/css2?family=Six+Caps");
 * {
-  margin: 0;
   font-size: 10px;
+  margin: 0;
+}
+@media (min-resolution: 96dpi) {
+  * {
+    font-size: 10px;
+  }
+}
+@media (min-resolution: 166dpi) {
+  * {
+    font-size: 10px;
+  }
+}
+@media (min-resolution: 192dpi) {
+  * {
+    font-size: 5px;
+  }
+}
+@media (min-resolution: 469dpi) {
+  * {
+    font-size: 5px;
+  }
 }
 
 h1 {
