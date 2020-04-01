@@ -16,7 +16,6 @@ $skew-degrees: 1.5deg;
     margin-top: 10px;
     flex-direction: column;
     div {
-      height: 100%;
       transform: skew(0deg, -$skew-degrees);
     }
   }
