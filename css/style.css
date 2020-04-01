@@ -27,6 +27,31 @@
     font-size: 5px;
   }
 }
+@media only screen and (max-width: 792px) {
+  * {
+    font-size: 9px;
+  }
+}
+@media only screen and (max-width: 675px) {
+  * {
+    font-size: 8px;
+  }
+}
+@media only screen and (max-width: 610px) {
+  * {
+    font-size: 7px;
+  }
+}
+@media only screen and (max-width: 533px) {
+  * {
+    font-size: 6px;
+  }
+}
+@media only screen and (max-width: 454px) {
+  * {
+    font-size: 5px;
+  }
+}
 @media only screen and (max-width: 376px) {
   * {
     font-size: 4px;
