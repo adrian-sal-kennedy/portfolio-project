@@ -7,6 +7,9 @@ $skew-degrees: 4deg;
   flex-direction: column;
   align-items: center;
   perspective: 200rem; 
+  .skewbox {
+    max-height: 25%;
+  }
   .skewbox-title {
     transform: unset;
     margin-bottom: 15px;

@@ -179,6 +179,9 @@ h2 {
     align-items: center;
     perspective: 200rem;
   }
+  .container .skewbox, .footer-container .skewbox, .header-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
+    max-height: 25%;
+  }
   .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
     transform: unset;
     margin-bottom: 15px;
