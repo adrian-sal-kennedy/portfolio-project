@@ -8,7 +8,6 @@ $skew-degrees: 1.5deg;
   flex-direction: row;
   align-items: stretch;
   // justify-content: center;
-  perspective: 200rem;
   .skewbox {
     h1 {
       font-family: 'Six Caps', sans-serif;
@@ -38,6 +37,7 @@ $skew-degrees: 1.5deg;
   .skewbox:nth-of-type(2n) {
     transform: skew(0deg, -$skew-degrees);
     margin-top: -1rem;
+    margin-bottom: 1rem;
     div {
       transform: skew(0deg, $skew-degrees);
     }

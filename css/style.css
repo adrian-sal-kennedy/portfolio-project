@@ -56,7 +56,6 @@ h2 {
   background: linear-gradient(90deg, #b83125 0%, #d83b2c 33%, #d83b2c 67%, #b83125 100%);
   outline: solid 0.8rem black;
   outline-offset: -0.8em;
-  margin-top: 1rem;
   box-shadow: inset 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.25), 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.25);
   transform: skew(4deg, 0deg);
   margin-left: 1rem;
@@ -105,6 +104,7 @@ h2 {
   contain: layout;
   display: flex;
   flex: 1 2 auto;
+  width: 100%;
   justify-content: space-around;
   align-items: flex-end;
 }
@@ -127,7 +127,6 @@ h2 {
     width: 90vw;
     flex-direction: row;
     align-items: stretch;
-    perspective: 200rem;
   }
   .container .skewbox, .footer-container .skewbox, .header-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
     transform: skew(0deg, 1.5deg);
@@ -156,6 +155,7 @@ h2 {
   .container .skewbox:nth-of-type(2n), .footer-container .skewbox:nth-of-type(2n), .header-container .skewbox:nth-of-type(2n), .container .skewbox-title:nth-of-type(2n), .footer-container .skewbox-title:nth-of-type(2n), .header-container .skewbox-title:nth-of-type(2n) {
     transform: skew(0deg, -1.5deg);
     margin-top: -1rem;
+    margin-bottom: 1rem;
   }
   .container .skewbox:nth-of-type(2n) div, .footer-container .skewbox:nth-of-type(2n) div, .header-container .skewbox:nth-of-type(2n) div, .container .skewbox-title:nth-of-type(2n) div, .footer-container .skewbox-title:nth-of-type(2n) div, .header-container .skewbox-title:nth-of-type(2n) div {
     transform: skew(0deg, 1.5deg);
@@ -194,15 +194,14 @@ h2 {
 @media (max-aspect-ratio: 5/4) {
   .container, .footer-container, .header-container {
     display: flex;
-    flex: 2 1 0%;
-    width: 100vw;
-    height: auto;
+    flex: 1 1 0%;
+    width: 85vw;
     flex-direction: column;
     align-items: center;
-    perspective: 200rem;
   }
   .container .skewbox, .footer-container .skewbox, .header-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
-    width: 80%;
+    width: 100%;
+    margin-top: 1rem;
   }
   .container .skewbox:nth-of-type(2n), .footer-container .skewbox:nth-of-type(2n), .header-container .skewbox:nth-of-type(2n), .container .skewbox-title:nth-of-type(2n), .footer-container .skewbox-title:nth-of-type(2n), .header-container .skewbox-title:nth-of-type(2n) {
     transform: skew(-4deg, 0deg);
@@ -220,7 +219,7 @@ h2 {
     width: 95%;
     justify-content: center;
     transform: unset;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
     transform: rotateX(-20deg);
   }
   .container .skewbox-title h1, .footer-container .skewbox-title h1, .header-container .skewbox-title h1 {
@@ -232,8 +231,8 @@ h2 {
   }
   .container .skewbox-title:hover, .footer-container .skewbox-title:hover, .header-container .skewbox-title:hover {
     padding: 0;
-    margin-top: unset;
-    margin-bottom: -1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
   }
   .container .skewbox-link, .footer-container .skewbox-link, .header-container .skewbox-link {
     flex-direction: column;
@@ -246,10 +245,11 @@ h2 {
   justify-content: center;
   background-color: unset;
   flex: 0 1 0%;
+  perspective: 200rem;
 }
 
 .footer-container {
-  margin-top: auto;
+  width: 90vw;
   flex-direction: column;
   flex: 0 1 100%;
 }
