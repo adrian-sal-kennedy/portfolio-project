@@ -64,14 +64,13 @@ nav > * {
   contain: paint;
   display: flex;
   flex-direction: column;
-  flex: 1 1 100%;
+  flex: 0 1 100%;
   width: 100%;
   align-items: center;
   box-sizing: border-box;
   outline: solid 0.8rem rgba(0, 0, 0, 0.5);
   outline-offset: -0.8em;
   box-shadow: inset 0.6rem 0.6rem 1.2rem rgba(0, 0, 0, 0.25), 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.25);
-  margin-left: 1rem;
   margin-top: 1rem;
 }
 
@@ -160,6 +159,9 @@ a.skewbox, a.skewbox-title {
     width: 90vw;
     flex-direction: row;
     align-items: stretch;
+  }
+  .container .thickborderbox, .footer-container .thickborderbox, .header-container .thickborderbox, .container .gradbox, .footer-container .gradbox, .header-container .gradbox, .container .skewbox, .footer-container .skewbox, .header-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
+    margin-left: 1rem;
   }
   .container .skewbox, .footer-container .skewbox, .header-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
     transform: skew(0deg, 1.5deg);
@@ -272,6 +274,29 @@ a.skewbox, a.skewbox-title {
     align-items: flex-start;
   }
 }
+.thickborderbox, .gradbox, .skewbox, a.skewbox, .skewbox-title, a.skewbox-title {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.thickborderbox p.p, .gradbox p.p, .skewbox p.p, .skewbox-title p.p, .thickborderbox h1.p, .gradbox h1.p, .skewbox h1.p, .skewbox-title h1.p {
+  display: block;
+  font-family: "Sen", sans-serif;
+  font-size: 4rem;
+  text-transform: unset;
+  text-align: left;
+  transform: unset;
+  letter-spacing: unset;
+  color: #611313;
+  display: block;
+  margin: 2rem 2rem 0 2rem;
+  padding-bottom: 2rem;
+}
+.thickborderbox p.p, .gradbox p.p, .skewbox p.p, .skewbox-title p.p {
+  font-size: 2.2rem;
+  margin: 2rem 3rem 0 3rem;
+  text-indent: 4rem;
+}
+
 .header-container {
   width: 100vw;
   align-items: center;
@@ -279,6 +304,24 @@ a.skewbox, a.skewbox-title {
   background-color: unset;
   flex: 0 1 0%;
   perspective: 200rem;
+}
+.header-container .gradbox, .header-container .skewbox, .header-container .skewbox-title {
+  width: 100vw;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header-container .gradbox .h1, .header-container .skewbox .h1, .header-container .skewbox-title .h1 {
+  font-size: 6rem;
+  margin: 0 0 0 3rem;
+}
+.header-container .gradbox .p, .header-container .skewbox .p, .header-container .skewbox-title .p {
+  margin: 0;
+  display: block;
+  font-family: "Sen", sans-serif;
+  font-size: 2rem;
+  color: papayawhip;
+  margin: 0 0 0 2rem;
 }
 
 .footer-container {
@@ -309,32 +352,6 @@ a.skewbox, a.skewbox-title {
 }
 .skewbox:nth-child(3n) .skewbox-pic, .skewbox-title:nth-child(3n) .skewbox-pic {
   background-image: url("../assets/il-cattivo.svg");
-}
-
-.thickborderbox, .gradbox, .skewbox, a.skewbox, .skewbox-title, a.skewbox-title {
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.thickborderbox h1, .gradbox h1, .skewbox h1, .skewbox-title h1, .thickborderbox p, .gradbox p, .skewbox p, .skewbox-title p, .thickborderbox .p, .gradbox .p, .skewbox .p, .skewbox-title .p {
-  display: block;
-  font-family: "Sen", sans-serif;
-  font-size: 4rem;
-  text-transform: unset;
-  text-align: left;
-  transform: unset;
-  letter-spacing: unset;
-  color: #611313;
-  display: block;
-  margin: 2rem 2rem 0 2rem;
-}
-.thickborderbox p, .gradbox p, .skewbox p, .skewbox-title p, .thickborderbox .p, .gradbox .p, .skewbox .p, .skewbox-title .p {
-  font-size: 2.2rem;
-  margin: 2rem 3rem 0 3rem;
-  text-indent: 4rem;
-}
-
-.header-container p, .header-container .p {
-  color: papayawhip;
 }
 
 /*# sourceMappingURL=style.css.map */

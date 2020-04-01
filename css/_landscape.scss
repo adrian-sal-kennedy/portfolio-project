@@ -6,6 +6,9 @@ $skew-degrees: 1.5deg;
   width: 90vw;
   flex-direction: row;
   align-items: stretch;
+  .thickborderbox {
+    margin-left: 1rem;
+  }
   .skewbox {
     h1 {
       font-family: 'Six Caps', sans-serif;
