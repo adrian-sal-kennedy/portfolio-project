@@ -112,11 +112,6 @@ h2 {
 }
 
 @media (min-aspect-ratio: 4/3) {
-  h1 {
-    font-family: "Six Caps", serif;
-    font-size: 10em;
-  }
-
   .container, .footer-container, .header-container {
     display: flex;
     width: 90vw;
@@ -130,6 +125,10 @@ h2 {
     margin-top: 10px;
     flex-direction: column;
   }
+  .container .skewbox h1, .footer-container .skewbox h1, .header-container .skewbox h1, .container .skewbox-title h1, .footer-container .skewbox-title h1, .header-container .skewbox-title h1 {
+    font-family: "Six Caps", sans-serif;
+    font-size: 10em;
+  }
   .container .skewbox div, .footer-container .skewbox div, .header-container .skewbox div, .container .skewbox-title div, .footer-container .skewbox-title div, .header-container .skewbox-title div {
     height: 100%;
     transform: skew(0deg, -1.5deg);
@@ -138,6 +137,10 @@ h2 {
     transform: unset;
     margin-bottom: 15px;
     transform: rotateX(-20deg);
+  }
+  .container .skewbox-title h1, .footer-container .skewbox-title h1, .header-container .skewbox-title h1 {
+    font-family: "Sancreek", serif;
+    font-size: 10em;
   }
   .container .skewbox-title div, .footer-container .skewbox-title div, .header-container .skewbox-title div {
     transform: unset;

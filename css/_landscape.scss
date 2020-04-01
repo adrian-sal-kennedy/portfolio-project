@@ -1,9 +1,5 @@
 $skew-degrees: 1.5deg;
 
-h1 {
-  font-family: 'Six Caps', serif;
-  font-size: 10em;
-}
 .container {
   display: flex;
   width: 90vw;
@@ -12,6 +8,10 @@ h1 {
   align-items: center;
   perspective: 200rem;  
   .skewbox {
+    h1 {
+      font-family: 'Six Caps', sans-serif;
+      font-size: 10em;
+    }
     transform: skew(0deg, $skew-degrees);
     margin-top: 10px;
     flex-direction: column;
@@ -21,6 +21,10 @@ h1 {
     }
   }
   .skewbox-title {
+    h1 {
+      font-family: 'Sancreek', serif;
+      font-size: 10em;
+    }
     transform: unset;
     margin-bottom: 15px;
     transform: rotateX(-20deg);
