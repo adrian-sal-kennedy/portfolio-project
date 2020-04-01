@@ -9,7 +9,7 @@
 h1 {
   font-family: "Sancreek", serif;
   color: papayawhip;
-  transform: scale(1, 0.5);
+  transform: scale(1, 0.67);
   text-transform: uppercase;
   text-align: center;
   font-size: 6rem;
@@ -25,7 +25,7 @@ h2 {
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
 }
 
-.container {
+.container, .footer-container {
   display: flex;
   width: 100vw;
   min-width: 360px;
@@ -33,7 +33,8 @@ h2 {
   align-items: center;
   perspective: 200rem;
 }
-.container .skewbox, .container .skewbox-title {
+.container .skewbox, .footer-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title {
+  flex: 0 1 auto;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -48,17 +49,17 @@ h2 {
   transition: 0.08s;
   animation-timing-function: ease-out;
 }
-.container .skewbox div, .container .skewbox-title div {
+.container .skewbox div, .footer-container .skewbox div, .container .skewbox-title div, .footer-container .skewbox-title div {
   margin-left: 3em;
   margin-right: 3em;
   transform: skew(-4deg, 0deg);
 }
-.container .skewbox:hover, .container .skewbox-title:hover {
+.container .skewbox:hover, .footer-container .skewbox:hover, .container .skewbox-title:hover, .footer-container .skewbox-title:hover {
   padding: 0.67rem;
   margin-top: 0.33rem;
   margin-bottom: -0.75rem;
 }
-.container .skewbox-title {
+.container .skewbox-title, .footer-container .skewbox-title {
   width: 95%;
   margin: 0;
   margin-bottom: -0.8rem;
@@ -67,45 +68,25 @@ h2 {
   transition: initial;
   animation-timing-function: initial;
 }
-.container .skewbox-title div {
+.container .skewbox-title div, .footer-container .skewbox-title div {
   margin-left: 3em;
   margin-right: 3em;
   transform: skew(0deg, 0deg);
 }
-.container .skewbox-title h1 {
+.container .skewbox-title h1, .footer-container .skewbox-title h1 {
   font-size: 7.5rem;
 }
-.container .skewbox-title:hover {
+.container .skewbox-title:hover, .footer-container .skewbox-title:hover {
   padding: initial;
   margin-top: inherit;
   margin-bottom: -0.8rem;
 }
-.container .skewbox:nth-of-type(2n), .container .skewbox-title:nth-of-type(2n) {
+.container .skewbox:nth-of-type(2n), .footer-container .skewbox:nth-of-type(2n), .container .skewbox-title:nth-of-type(2n), .footer-container .skewbox-title:nth-of-type(2n) {
   transform: skew(-4deg, 0deg);
   margin-left: -10px;
 }
-.container .skewbox:nth-of-type(2n) div, .container .skewbox-title:nth-of-type(2n) div {
+.container .skewbox:nth-of-type(2n) div, .footer-container .skewbox:nth-of-type(2n) div, .container .skewbox-title:nth-of-type(2n) div, .footer-container .skewbox-title:nth-of-type(2n) div {
   transform: skew(4deg, 0deg);
-}
-.container .footer {
-  contain: paint;
-  display: flex;
-  width: 80vw;
-  justify-content: space-around;
-  margin-top: auto;
-  margin-bottom: 0;
-}
-.container .footer a {
-  text-decoration: none;
-}
-.container .footer .button {
-  z-index: 10;
-  margin: 0.5rem 1rem;
-  background: papayawhip;
-  box-shadow: 0px 0px 30px 30px papayawhip;
-}
-.container .footer .button:hover {
-  font-size: 3rem;
 }
 
 .skewbox-title {
@@ -131,22 +112,43 @@ h2 {
   margin-bottom: -0.8rem;
 }
 
+.footer-container {
+  margin-top: auto;
+}
+
+.footer {
+  margin-top: 45px;
+  margin-bottom: 0;
+  contain: layout;
+  display: flex;
+  width: 80vw;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer .button {
+  margin: 0.5rem 1rem;
+  background: papayawhip;
+  box-shadow: 0px 0px 30px 30px papayawhip;
+}
+.footer .button:hover {
+  font-size: 3rem;
+}
+
 .outer {
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
 }
 
 .skewbox-pic {
-  min-width: 200px;
-  flex-grow: 0;
-  min-height: 200px;
-  background-position: center;
+  min-width: 150px;
+  min-height: 150px;
   background-size: contain;
   order: 0;
-}
-
-.skewbox-link {
-  flex-grow: 1;
 }
 
 .skewbox:nth-child(2n) .skewbox-pic, .skewbox-title:nth-child(2n) .skewbox-pic {

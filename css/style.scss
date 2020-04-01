@@ -14,23 +14,30 @@ $skew-degrees: 4deg;
 // @import "landscape";
 
 @import "skewbox-title";
+.footer-container {
+  @extend .container;
+  margin-top: auto;
+}
+@import "footer";
 
 .outer {
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
 }
 
 .skewbox-pic {
-  min-width: 200px;
-  flex-grow: 0;
-  min-height: 200px;
-  background-position: center;
+  min-width: 150px;
+  // flex-grow: 0;
+  min-height: 150px;
+  // background-position: left;
   background-size: contain;
   order: 0;
 }
-.skewbox-link {
-  flex-grow: 1;
-}
+// .skewbox-link {
+//   flex-grow: 1;
+// }
 
 .skewbox {
   &:nth-child(2n) .skewbox-pic {
@@ -46,4 +53,3 @@ $skew-degrees: 4deg;
     background-image: url("../assets/il-cattivo.svg");
   }
 }
-  // background-image: url("assets/il-buono.svg");

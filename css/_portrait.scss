@@ -7,7 +7,7 @@
 h1 {
   font-family: 'Sancreek', serif;
   color: papayawhip;
-  transform: scale(1,0.5);
+  transform: scale(1,0.67);
   text-transform: uppercase;
   text-align: center;
   font-size: 6rem;
@@ -26,10 +26,9 @@ h2 {
 .container {
   display: flex;
   width: 100vw;
-  // min-width: 384px;
   min-width: $media-phone;
+  // flex: 1 0 100%;
   flex-direction: column;
-  // flex-direction: row;
   align-items: center;
   perspective: 200rem;  
   @import "skewbox";
@@ -41,5 +40,4 @@ h2 {
       transform: skew($skew-degrees, 0deg);
     }
   }
-  @import "footer"
 }
