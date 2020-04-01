@@ -27,6 +27,21 @@
     font-size: 5px;
   }
 }
+@media only screen and (max-width: 376px) {
+  * {
+    font-size: 4px;
+  }
+}
+@media only screen and (max-width: 308px) {
+  * {
+    font-size: 3px;
+  }
+}
+@media only screen and (max-width: 226px) {
+  * {
+    font-size: 2.5px;
+  }
+}
 
 h1, .h1 {
   display: block;
@@ -306,7 +321,6 @@ a.skewbox, a.skewbox-title {
   perspective: 200rem;
 }
 .header-container .gradbox, .header-container .skewbox, .header-container .skewbox-title {
-  width: 100vw;
   flex: 1;
   align-items: center;
   justify-content: flex-start;
@@ -322,6 +336,9 @@ a.skewbox, a.skewbox-title {
   font-size: 2rem;
   color: papayawhip;
   margin: 0 0 0 2rem;
+}
+.header-container .skewbox-title {
+  justify-content: center;
 }
 
 .footer-container {
