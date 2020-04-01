@@ -13,12 +13,13 @@ $skew-degrees: 4deg;
 @import "portrait";
 // @import "landscape";
 
+@import "footer";
+
 @import "skewbox-title";
 .footer-container {
   @extend .container;
   margin-top: auto;
 }
-@import "footer";
 
 .outer {
   display: flex;
@@ -28,16 +29,17 @@ $skew-degrees: 4deg;
 }
 
 .skewbox-pic {
+  z-index: -1;
   min-width: 150px;
-  // flex-grow: 0;
+  flex-grow: 1;
   min-height: 150px;
-  // background-position: left;
-  background-size: contain;
+  background-position: center;
+  background-size: 100%;
   order: 0;
 }
-// .skewbox-link {
-//   flex-grow: 1;
-// }
+.skewbox-link {
+  flex-grow: 2;
+}
 
 .skewbox {
   &:nth-child(2n) .skewbox-pic {
