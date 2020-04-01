@@ -32,9 +32,9 @@ h1 {
   transform: scale(1, 0.67);
   text-transform: uppercase;
   text-align: center;
-  font-size: 6rem;
+  font-size: 8rem;
   letter-spacing: 0.05em;
-  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+  text-shadow: 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.25);
 }
 
 h2 {
@@ -42,23 +42,22 @@ h2 {
   font-size: 2rem;
   color: firebrick;
   text-transform: uppercase;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+  text-shadow: 0.3rem 0.3rem 0.8rem rgba(0, 0, 0, 0.1);
 }
 
 .skewbox, .skewbox-title {
   contain: paint;
-  flex: 0 1 auto;
   display: flex;
+  flex: 1 1 100%;
   align-items: center;
-  justify-content: space-evenly;
+  box-sizing: border-box;
   background: linear-gradient(90deg, #b83125 0%, #d83b2c 33%, #d83b2c 67%, #b83125 100%);
   outline: solid 0.8rem black;
   outline-offset: -0.8em;
-  width: 80%;
   margin-top: 1rem;
-  box-shadow: inset 3px 3px 12px rgba(0, 0, 0, 0.25), 3px 3px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.25), 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.25);
   transform: skew(4deg, 0deg);
-  margin-left: 10px;
+  margin-left: 1rem;
   transition: 0.08s;
   animation-timing-function: ease-out;
 }
@@ -66,34 +65,29 @@ h2 {
   z-index: -1;
   transform: skew(-4deg, 0deg);
 }
-.skewbox:hover, .skewbox-title:hover {
-  padding: 0.67rem;
-  margin-top: 0.33rem;
-  margin-bottom: -0.75rem;
-}
 
 .skewbox-pic {
-  min-width: 150px;
-  flex-grow: 1;
-  min-height: 150px;
+  flex: 1 1 15rem;
+  align-self: stretch;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   order: 0;
 }
 
 .skewbox-link {
-  flex-grow: 2;
+  display: flex;
+  align-items: flex-start;
+  flex: 1 1 15rem;
 }
 
 .skewbox-title {
-  width: 95%;
+  flex: 0 1 auto;
   margin: 0;
   margin-bottom: -0.8rem;
   transform-style: preserve-3d;
   transition: initial;
   animation-timing-function: initial;
   transform: rotateX(-30deg);
-  margin-bottom: -10px;
 }
 .skewbox-title div {
   margin-left: 3em;
@@ -102,18 +96,13 @@ h2 {
 .skewbox-title h1 {
   font-size: 7.5rem;
 }
-.skewbox-title:hover {
-  padding: initial;
-  margin-top: inherit;
-  margin-bottom: -0.8rem;
-}
 
 .footer {
-  margin-top: 45px;
-  margin-bottom: 0;
+  margin-top: 4.5rem;
+  margin-bottom: 0rem;
   contain: layout;
   display: flex;
-  width: 80vw;
+  flex: 1 2 auto;
   justify-content: space-around;
   align-items: flex-end;
 }
@@ -123,24 +112,24 @@ h2 {
 .footer .button {
   margin: 0.5rem 1rem;
   background: papayawhip;
-  box-shadow: 0px 0px 30px 30px papayawhip;
+  box-shadow: 0 0 3rem 3rem papayawhip;
 }
 .footer .button:hover {
   font-size: 3rem;
 }
 
-@media (min-aspect-ratio: 4/3) {
+@media (min-aspect-ratio: 5/4) {
   .container, .footer-container, .header-container {
     display: flex;
+    flex: 1 1 100%;
     width: 90vw;
-    min-width: 360px;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     perspective: 200rem;
   }
   .container .skewbox, .footer-container .skewbox, .header-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
     transform: skew(0deg, 1.5deg);
-    margin-top: 10px;
+    margin-left: 1rem;
     flex-direction: column;
   }
   .container .skewbox h1, .footer-container .skewbox h1, .header-container .skewbox h1, .container .skewbox-title h1, .footer-container .skewbox-title h1, .header-container .skewbox-title h1 {
@@ -152,7 +141,7 @@ h2 {
   }
   .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
     transform: unset;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
     transform: rotateX(-20deg);
   }
   .container .skewbox-title h1, .footer-container .skewbox-title h1, .header-container .skewbox-title h1 {
@@ -164,61 +153,118 @@ h2 {
   }
   .container .skewbox:nth-of-type(2n), .footer-container .skewbox:nth-of-type(2n), .header-container .skewbox:nth-of-type(2n), .container .skewbox-title:nth-of-type(2n), .footer-container .skewbox-title:nth-of-type(2n), .header-container .skewbox-title:nth-of-type(2n) {
     transform: skew(0deg, -1.5deg);
-    margin-top: -10px;
+    margin-top: -1rem;
   }
   .container .skewbox:nth-of-type(2n) div, .footer-container .skewbox:nth-of-type(2n) div, .header-container .skewbox:nth-of-type(2n) div, .container .skewbox-title:nth-of-type(2n) div, .footer-container .skewbox-title:nth-of-type(2n) div, .header-container .skewbox-title:nth-of-type(2n) div {
     transform: skew(0deg, 1.5deg);
   }
+  .container .skewbox:hover, .footer-container .skewbox:hover, .header-container .skewbox:hover, .container .skewbox-title:hover, .footer-container .skewbox-title:hover, .header-container .skewbox-title:hover {
+    padding: 0.67rem;
+    margin-left: 0.33rem;
+    margin-right: -0.67rem;
+  }
+  .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
+    width: 95%;
+    justify-content: center;
+    transform: unset;
+    margin-bottom: 1.5rem;
+    transform: rotateX(-20deg);
+  }
+  .container .skewbox-title h1, .footer-container .skewbox-title h1, .header-container .skewbox-title h1 {
+    font-family: "Sancreek", serif;
+    font-size: 10em;
+  }
+  .container .skewbox-title div, .footer-container .skewbox-title div, .header-container .skewbox-title div {
+    transform: unset;
+  }
+  .container .skewbox-title:hover, .footer-container .skewbox-title:hover, .header-container .skewbox-title:hover {
+    padding: 0;
+    margin-top: unset;
+    margin-bottom: 1.5rem;
+  }
 }
-@media (max-aspect-ratio: 4/3) {
+@media (max-aspect-ratio: 5/4) and (max-aspect-ratio: 320/568) {
+  h1 {
+    font-family: "Six Caps", sans-serif;
+    font-size: 13em;
+  }
+}
+@media (max-aspect-ratio: 5/4) {
   .container, .footer-container, .header-container {
     display: flex;
+    flex: 2 1 0%;
     width: 100vw;
-    min-width: 360px;
+    height: auto;
     flex-direction: column;
     align-items: center;
     perspective: 200rem;
   }
   .container .skewbox, .footer-container .skewbox, .header-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
-    max-height: 25%;
+    width: 80%;
+  }
+  .container .skewbox:nth-of-type(2n), .footer-container .skewbox:nth-of-type(2n), .header-container .skewbox:nth-of-type(2n), .container .skewbox-title:nth-of-type(2n), .footer-container .skewbox-title:nth-of-type(2n), .header-container .skewbox-title:nth-of-type(2n) {
+    transform: skew(-4deg, 0deg);
+    margin-left: -1rem;
+  }
+  .container .skewbox:nth-of-type(2n) div, .footer-container .skewbox:nth-of-type(2n) div, .header-container .skewbox:nth-of-type(2n) div, .container .skewbox-title:nth-of-type(2n) div, .footer-container .skewbox-title:nth-of-type(2n) div, .header-container .skewbox-title:nth-of-type(2n) div {
+    transform: skew(4deg, 0deg);
+  }
+  .container .skewbox:hover, .footer-container .skewbox:hover, .header-container .skewbox:hover, .container .skewbox-title:hover, .footer-container .skewbox-title:hover, .header-container .skewbox-title:hover {
+    padding: 0.67rem;
+    margin-top: 0.33rem;
+    margin-bottom: -0.67rem;
   }
   .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
+    width: 95%;
+    justify-content: center;
     transform: unset;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
     transform: rotateX(-20deg);
+  }
+  .container .skewbox-title h1, .footer-container .skewbox-title h1, .header-container .skewbox-title h1 {
+    font-family: "Sancreek", serif;
+    font-size: 10em;
   }
   .container .skewbox-title div, .footer-container .skewbox-title div, .header-container .skewbox-title div {
     transform: unset;
   }
-  .container .skewbox:nth-of-type(2n), .footer-container .skewbox:nth-of-type(2n), .header-container .skewbox:nth-of-type(2n), .container .skewbox-title:nth-of-type(2n), .footer-container .skewbox-title:nth-of-type(2n), .header-container .skewbox-title:nth-of-type(2n) {
-    transform: skew(-4deg, 0deg);
-    margin-left: -10px;
+  .container .skewbox-title:hover, .footer-container .skewbox-title:hover, .header-container .skewbox-title:hover {
+    padding: 0;
+    margin-top: unset;
+    margin-bottom: -1rem;
   }
-  .container .skewbox:nth-of-type(2n) div, .footer-container .skewbox:nth-of-type(2n) div, .header-container .skewbox:nth-of-type(2n) div, .container .skewbox-title:nth-of-type(2n) div, .footer-container .skewbox-title:nth-of-type(2n) div, .header-container .skewbox-title:nth-of-type(2n) div {
-    transform: skew(4deg, 0deg);
+  .container .skewbox-link, .footer-container .skewbox-link, .header-container .skewbox-link {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .header-container {
   width: 100vw;
   align-items: center;
   justify-content: center;
+  background-color: unset;
+  flex: 0 1 0%;
 }
 
 .footer-container {
   margin-top: auto;
   flex-direction: column;
+  flex: 0 1 100%;
 }
 
 .outer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
 }
 
 .skewbox:nth-child(2n) .skewbox-pic, .skewbox-title:nth-child(2n) .skewbox-pic {
   order: 1;
+}
+.skewbox:nth-child(2n) .skewbox-link, .skewbox-title:nth-child(2n) .skewbox-link {
+  align-items: flex-end;
 }
 .skewbox:nth-child(3n-2) .skewbox-pic, .skewbox-title:nth-child(3n-2) .skewbox-pic {
   background-image: url("../assets/il-buono.svg");

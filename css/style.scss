@@ -39,9 +39,9 @@ h1 {
   transform: scale(1,0.67);
   text-transform: uppercase;
   text-align: center;
-  font-size: 6rem;
+  font-size: 8rem;
   letter-spacing: 0.05em;
-  text-shadow: 3px 3px 12px rgba(0,0,0,0.25);
+  text-shadow: 0.3rem 0.3rem 1.2rem rgba(0,0,0,0.25);
 }
 
 h2 {
@@ -49,45 +49,49 @@ h2 {
   font-size: 2rem;
   color: firebrick;
   text-transform: uppercase;
-  text-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+  text-shadow: 0.3rem 0.3rem 0.8rem rgba(0,0,0,0.1);
 }
 
 @import "skewbox";
 @import "skewbox-title";
 @import "footer";
 
-@media (min-aspect-ratio: 4/3) {
+@media (min-aspect-ratio: 5/4) {
   @import "landscape";
 }
-@media (max-aspect-ratio: 4/3) {
+@media (max-aspect-ratio: 5/4) {
   @import "portrait";
 }
-
 .header-container {
   @extend .container;
   width: 100vw;
   align-items: center;
   justify-content: center;
-  // perspective: 200rem;  
+  background-color: unset;
+  flex: 0 1 0%;
 }
 .footer-container {
   @extend .container;
+  // width: 100vw;
   margin-top: auto;
   flex-direction: column;
+  flex: 0 1 100%;
 }
 
 .outer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(90deg, burlywood 0%, papayawhip 33%, papayawhip 67%, burlywood 100%);
 }
-
 .skewbox {
   &:nth-child(2n) .skewbox-pic {
   order: 1;
   }
+  &:nth-child(2n) .skewbox-link {
+  align-items: flex-end;
+}
   &:nth-child(3n-2) .skewbox-pic {
     background-image: url("../assets/il-buono.svg");
   }

@@ -1,28 +1,57 @@
 $skew-degrees: 4deg;
-
+@media (max-aspect-ratio: 320/568) {
+  h1 {
+    font-family: 'Six Caps', sans-serif;
+    font-size: 13em;
+  }
+}
 .container {
   display: flex;
+  flex: 2 1 0%;
   width: 100vw;
-  min-width: $media-phone;
+  height: auto;
+  // min-width: $media-phone;
   flex-direction: column;
   align-items: center;
-  perspective: 200rem; 
+  perspective: 200rem;
   .skewbox {
-    max-height: 25%;
+    // justify-content: stretch;
+    width: 80%;
+  }
+  .skewbox:nth-of-type(2n) {
+    transform: skew(-$skew-degrees, 0deg);
+    margin-left: -1rem;
+    div {
+      transform: skew($skew-degrees, 0deg);
+    }
+  }
+  .skewbox:hover {
+    padding: 0.67rem;
+    margin-top: 0.33rem;
+    margin-bottom: -0.67rem;
   }
   .skewbox-title {
+    width: 95%;
+    h1 {
+      font-family: 'Sancreek', serif;
+      font-size: 10em;
+    }
+    justify-content: center;
     transform: unset;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
     transform: rotateX(-20deg);
     div {
       transform: unset;
     }
-  } 
-  .skewbox:nth-of-type(2n) {
-    transform: skew(-$skew-degrees, 0deg);
-    margin-left: -10px;
-    div {
-      transform: skew($skew-degrees, 0deg);
-    }
+    &:hover {
+      padding: 0;
+      margin-top: unset;
+      // margin-bottom: unset;
+      margin-bottom: -1rem;
+    } 
+  }
+  .skewbox-link {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
