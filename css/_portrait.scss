@@ -9,12 +9,9 @@ $skew-degrees: 4deg;
   display: flex;
   flex: 1 1 0%;
   width: 85vw;
-  // height: auto;
-  // min-width: $media-phone;
   flex-direction: column;
   align-items: center;
   .skewbox {
-    // justify-content: stretch;
     width: 100%;
     margin-top: 1rem;
   }

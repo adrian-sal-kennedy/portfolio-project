@@ -4,10 +4,8 @@ $skew-degrees: 1.5deg;
   display: flex;
   flex: 1 1 100%;
   width: 90vw;
-  // min-width: $media-phone;
   flex-direction: row;
   align-items: stretch;
-  // justify-content: center;
   .skewbox {
     h1 {
       font-family: 'Six Caps', sans-serif;
@@ -16,8 +14,6 @@ $skew-degrees: 1.5deg;
     transform: skew(0deg, $skew-degrees);
     margin-left: 1rem;
     flex-direction: column;
-    // flex: 1 1;
-    // align-items: stretch;
     div {
       transform: skew(0deg, -$skew-degrees);
     }

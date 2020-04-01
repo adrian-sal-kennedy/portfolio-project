@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sancreek');
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700');
 @import url('https://fonts.googleapis.com/css2?family=Six+Caps');
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
 
 $media-tablet: 768px;
 $media-phone: 360px;
@@ -12,6 +13,7 @@ $root-font-size: 10px;
 // Averia serif libre - h1, main sections
 // sancreek - noodly cheezy old west slab-serif - h2, buttons etc
 // Six Caps - tall movie font for landscape windows - h1
+// Sen - paragraph text. slightly art-deco
 
 * {
   font-size: 10px;
@@ -29,11 +31,12 @@ $root-font-size: 10px;
     // my phone - 4.7" 1080p
     font-size: 5px;
   }
-  
+  text-decoration: none;
   margin: 0;
 }
 
-h1 {
+h1, .h1 {
+  display: block;
   font-family: 'Sancreek', serif;
   color: papayawhip;
   transform: scale(1,0.67);
@@ -54,8 +57,17 @@ h2 {
   text-shadow: 0.3rem 0.3rem 0.8rem rgba(0,0,0,0.1);
 }
 
-@import "skewbox";
-@import "skewbox-title";
+nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-start;
+  & > * {
+    margin: 0 0rem 0 3rem; //top right bottom left
+  }
+}
+
+@import "boxes";
 @import "footer";
 
 @media (min-aspect-ratio: 5/4) {
@@ -93,7 +105,7 @@ h2 {
   }
   &:nth-child(2n) .skewbox-link {
   align-items: flex-end;
-}
+  }
   &:nth-child(3n-2) .skewbox-pic {
     background-image: url("../assets/il-buono.svg");
   }
@@ -102,5 +114,33 @@ h2 {
   }
   &:nth-child(3n) .skewbox-pic {
     background-image: url("../assets/il-cattivo.svg");
+  }
+}
+
+.thickborderbox {
+  align-items: flex-start;
+  justify-content: flex-start;
+  h1, p, .p {
+    display: block;
+    font-family: 'Sen', sans-serif;
+    font-size: 4rem;
+    text-transform: unset;
+    text-align: left;
+    transform: unset;
+    letter-spacing: unset;
+    color: rgb(97, 19, 19);
+    display: block;
+    margin: 2rem 2rem 0 2rem;
+  }
+  p, .p {
+    font-size: 2.2rem;
+    margin: 2rem 3rem 0 3rem;
+    text-indent: 4rem;
+  }
+}
+
+.header-container {
+  p, .p {
+    color: papayawhip;
   }
 }

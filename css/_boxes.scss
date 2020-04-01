@@ -1,0 +1,70 @@
+.thickborderbox {
+  contain: paint;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  outline: solid 0.8rem rgba(0,0,0,0.5);
+  outline-offset: -0.8em;
+  box-shadow: inset 0.6rem 0.6rem 1.2rem rgba(0,0,0,0.25), 0.3rem 0.3rem 1.2rem rgba(0,0,0,0.25);
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.gradbox {
+  @extend .thickborderbox;
+  flex-direction: unset;
+  margin-left: unset;
+  outline: solid 0.8rem black;
+  background: linear-gradient(90deg, rgb(184, 49, 37) 0%, rgb(216, 59, 44) 33%, rgb(216, 59, 44) 67%, rgb(184, 49, 37) 100%);
+  margin-bottom: 2rem;
+}
+
+.skewbox {
+  @extend .gradbox;
+  margin-top: unset;
+  width: unset;
+  margin-bottom: unset;
+  transform: skew($skew-degrees, 0deg);
+  transition: 0.08s;
+  animation-timing-function: ease-out;
+  div {
+    z-index: -1;
+    transform: skew(-$skew-degrees, 0deg);
+  }
+}
+
+.skewbox-pic {
+  flex: 1 1 15rem;
+  align-self: stretch;
+  background-position: center;
+  background-size: cover;
+  order: 0;
+}
+a.skewbox {
+  @extend .skewbox;
+  text-decoration: none;
+}
+.skewbox-link {
+  display: flex;
+  align-items: flex-start;
+  flex: 1 1 15rem;
+}
+.skewbox-title {
+  @extend .skewbox;
+  flex: 0 1 auto;
+  margin:0;
+  margin-bottom: -0.8rem;
+  transform-style: preserve-3d;
+  transition: initial;
+  animation-timing-function: initial;
+  transform: rotateX(-30deg);
+  div {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+  h1 {
+    font-size: 7.5rem;
+  }
+}
