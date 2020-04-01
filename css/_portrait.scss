@@ -1,38 +1,20 @@
-
-* {
-  margin: 0;
-  font-size: 10px;
-}
-
-h1 {
-  font-family: 'Sancreek', serif;
-  color: papayawhip;
-  transform: scale(1,0.67);
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 6rem;
-  letter-spacing: 0.05em;
-  text-shadow: 3px 3px 12px rgba(0,0,0,0.25);
-}
-
-h2 {
-  font-family: 'Averia Serif Libre', serif;
-  font-size: 2rem;
-  color: firebrick;
-  text-transform: uppercase;
-  text-shadow: 3px 3px 8px rgba(0,0,0,0.1);
-}
+$skew-degrees: 4deg;
 
 .container {
   display: flex;
   width: 100vw;
   min-width: $media-phone;
-  // flex: 1 0 100%;
   flex-direction: column;
   align-items: center;
-  perspective: 200rem;  
-  @import "skewbox";
-  @import "skewbox-title";
+  perspective: 200rem; 
+  .skewbox-title {
+    transform: unset;
+    margin-bottom: 15px;
+    transform: rotateX(-20deg);
+    div {
+      transform: unset;
+    }
+  } 
   .skewbox:nth-of-type(2n) {
     transform: skew(-$skew-degrees, 0deg);
     margin-left: -10px;

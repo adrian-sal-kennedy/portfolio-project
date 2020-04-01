@@ -1,3 +1,38 @@
+$skew-degrees: 1.5deg;
+
+h1 {
+  font-family: 'Six Caps', serif;
+  font-size: 10em;
+}
 .container {
+  display: flex;
+  width: 90vw;
+  min-width: $media-phone;
   flex-direction: row;
+  align-items: center;
+  perspective: 200rem;  
+  .skewbox {
+    transform: skew(0deg, $skew-degrees);
+    margin-top: 10px;
+    flex-direction: column;
+    div {
+      height: 100%;
+      transform: skew(0deg, -$skew-degrees);
+    }
+  }
+  .skewbox-title {
+    transform: unset;
+    margin-bottom: 15px;
+    transform: rotateX(-20deg);
+    div {
+      transform: unset;
+    }
+  }
+  .skewbox:nth-of-type(2n) {
+    transform: skew(0deg, -$skew-degrees);
+    margin-top: -10px;
+    div {
+      transform: skew(0deg, $skew-degrees);
+    }
+  }
 }
