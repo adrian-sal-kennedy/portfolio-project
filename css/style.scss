@@ -45,8 +45,10 @@ h1 {
 }
 
 h2 {
+  position: relative; //required to make z-index work
+  z-index: 1;
   font-family: 'Averia Serif Libre', serif;
-  font-size: 2rem;
+  font-size: 3rem;
   color: firebrick;
   text-transform: uppercase;
   text-shadow: 0.3rem 0.3rem 0.8rem rgba(0,0,0,0.1);
