@@ -272,7 +272,7 @@ a.skewbox, a.skewbox-title {
 .thickborderbox p.p, .gradbox p.p, .skewbox p.p, .skewbox-title p.p, .thickborderbox h1.p, .gradbox h1.p, .skewbox h1.p, .skewbox-title h1.p {
   display: block;
   font-family: "Sen", sans-serif;
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-transform: unset;
   text-align: left;
   transform: unset;
