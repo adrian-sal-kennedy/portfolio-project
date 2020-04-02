@@ -269,7 +269,7 @@ a.skewbox, a.skewbox-title {
   align-items: flex-start;
   justify-content: flex-start;
 }
-.thickborderbox p.p, .gradbox p.p, .skewbox p.p, .skewbox-title p.p, .thickborderbox h1.p, .gradbox h1.p, .skewbox h1.p, .skewbox-title h1.p {
+.thickborderbox p.p, .gradbox p.p, .skewbox p.p, .skewbox-title p.p, .thickborderbox h1.p, .gradbox h1.p, .skewbox h1.p, .skewbox-title h1.p, .thickborderbox h2.p, .gradbox h2.p, .skewbox h2.p, .skewbox-title h2.p, .thickborderbox h3.p, .gradbox h3.p, .skewbox h3.p, .skewbox-title h3.p {
   display: block;
   font-family: "Sen", sans-serif;
   font-size: 3.5rem;
@@ -282,10 +282,16 @@ a.skewbox, a.skewbox-title {
   margin: 2rem 2rem 0 2rem;
   padding-bottom: 2rem;
 }
+.thickborderbox h2.p, .gradbox h2.p, .skewbox h2.p, .skewbox-title h2.p {
+  font-size: 2.8rem;
+}
+.thickborderbox h3.p, .gradbox h3.p, .skewbox h3.p, .skewbox-title h3.p {
+  font-size: 2.5rem;
+}
 .thickborderbox p.p, .gradbox p.p, .skewbox p.p, .skewbox-title p.p {
   font-size: 2.2rem;
   margin: 0rem 3rem 0 3rem;
-  text-indent: 4rem;
+  text-indent: 2rem;
 }
 
 .header-container {
