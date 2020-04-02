@@ -8,6 +8,7 @@
   box-sizing: border-box;
   outline: solid 0.8rem rgba(0,0,0,0.5);
   outline-offset: -0.8em;
+  background: linear-gradient(90deg, papayawhip 0%, white 33%, white 67%, papayawhip 100%);
   box-shadow: inset 0.6rem 0.6rem 1.2rem rgba(0,0,0,0.25), 0.3rem 0.3rem 1.2rem rgba(0,0,0,0.25);
   margin-top: 1rem;
 }
@@ -25,13 +26,6 @@
   margin-top: unset;
   width: unset;
   margin-bottom: unset;
-  transform: skew($skew-degrees, 0deg);
-  transition: 0.08s;
-  animation-timing-function: ease-out;
-  div {
-    z-index: -1;
-    transform: skew(-$skew-degrees, 0deg);
-  }
 }
 
 .skewbox-pic {
@@ -52,18 +46,26 @@ a.skewbox {
 }
 .skewbox-title {
   @extend .skewbox;
+  width: 95%;
   flex: 0 1 auto;
   margin: 0;
   margin-bottom: -0.8rem;
   transform-style: preserve-3d;
   transition: initial;
   animation-timing-function: initial;
-  transform: rotateX(-30deg);
+  transform: unset;
+  transform: rotateX(-20deg);
+  justify-content: center;
   div {
+    transform: unset;
     margin-left: 3em;
     margin-right: 3em;
   }
   h1 {
-    font-size: 7.5rem;
+    font-family: 'Sancreek', serif;
+    font-size: 10em;
   }
+}
+.container.blog {
+  flex-direction: column;
 }

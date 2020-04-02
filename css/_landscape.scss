@@ -2,7 +2,7 @@ $skew-degrees: 1.5deg;
 
 .container {
   display: flex;
-  flex: 1 1 100%;
+  flex: 1 1 0%;
   width: 90vw;
   flex-direction: row;
   align-items: stretch;
@@ -15,23 +15,23 @@ $skew-degrees: 1.5deg;
       font-size: 10em;
     }
     transform: skew(0deg, $skew-degrees);
-    margin-left: 1rem;
     flex-direction: column;
+    align-items: center;
     div {
       transform: skew(0deg, -$skew-degrees);
     }
   }
   .skewbox-title {
     h1 {
-      font-family: 'Sancreek', serif;
       font-size: 10em;
+      font-family: 'Sancreek', serif;
     }
-    transform: unset;
-    margin-bottom: 1.5rem;
-    transform: rotateX(-20deg);
     div {
       transform: unset;
     }
+    transform: unset;
+    transform: rotateX(-20deg);
+    margin-bottom: 1.5rem;
   }
   .skewbox:nth-of-type(2n) {
     transform: skew(0deg, -$skew-degrees);
@@ -40,29 +40,5 @@ $skew-degrees: 1.5deg;
     div {
       transform: skew(0deg, $skew-degrees);
     }
-  }
-  .skewbox:hover {
-    padding: 0.67rem;
-    margin-left: 0.33rem;
-    margin-right: -0.67rem;
-  }
-  .skewbox-title {
-    width: 95%;
-    h1 {
-      font-family: 'Sancreek', serif;
-      font-size: 10em;
-    }
-    justify-content: center;
-    transform: unset;
-    margin-bottom: 1.5rem;
-    transform: rotateX(-20deg);
-    div {
-      transform: unset;
-    }
-    &:hover {
-      padding: 0;
-      margin-top: unset;
-      margin-bottom: 1.5rem;
-    } 
   }
 }

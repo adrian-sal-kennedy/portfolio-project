@@ -1,5 +1,5 @@
 $skew-degrees: 4deg;
-@media (max-aspect-ratio: 320/568) {
+@media (max-aspect-ratio: 9/16) {
   h1 {
     font-family: 'Six Caps', sans-serif;
     font-size: 13em;
@@ -12,8 +12,19 @@ $skew-degrees: 4deg;
   flex-direction: column;
   align-items: center;
   .skewbox {
+    padding: 1rem;
+    flex: 1 1 100%;
     width: 100%;
     margin-top: 1rem;
+    flex-direction: row;
+    align-items: center;
+    transform: skew($skew-degrees, 0deg);
+    transition: 0.08s;
+    animation-timing-function: ease-out;
+    div {
+      z-index: -1;
+      transform: skew(-$skew-degrees, 0deg);
+    }
   }
   .skewbox:nth-of-type(2n) {
     transform: skew(-$skew-degrees, 0deg);
@@ -22,30 +33,14 @@ $skew-degrees: 4deg;
       transform: skew($skew-degrees, 0deg);
     }
   }
-  .skewbox:hover {
-    padding: 0.67rem;
-    margin-top: 0.33rem;
-    margin-bottom: -0.67rem;
-  }
   .skewbox-title {
-    width: 95%;
-    h1 {
-      font-family: 'Sancreek', serif;
-      font-size: 10em;
-    }
-    justify-content: center;
-    transform: unset;
     margin-bottom: 0rem;
-    transform: rotateX(-20deg);
     div {
       transform: unset;
     }
-    &:hover {
-      padding: 0;
-      margin-top: 1rem;
-      // margin-bottom: unset;
-      margin-bottom: 0;
-    } 
+    transform: unset;
+    transform: rotateX(-20deg);
+    margin-bottom: 1.5rem;
   }
   .skewbox-link {
     flex-direction: column;

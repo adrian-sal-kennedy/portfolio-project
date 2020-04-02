@@ -27,7 +27,7 @@
     font-size: 5px;
   }
 }
-@media only screen and (max-width: 792px) {
+@media only screen and (max-width: 810px) {
   * {
     font-size: 9px;
   }
@@ -35,36 +35,6 @@
 @media only screen and (max-width: 675px) {
   * {
     font-size: 8px;
-  }
-}
-@media only screen and (max-width: 610px) {
-  * {
-    font-size: 7px;
-  }
-}
-@media only screen and (max-width: 533px) {
-  * {
-    font-size: 6px;
-  }
-}
-@media only screen and (max-width: 454px) {
-  * {
-    font-size: 5px;
-  }
-}
-@media only screen and (max-width: 376px) {
-  * {
-    font-size: 4px;
-  }
-}
-@media only screen and (max-width: 308px) {
-  * {
-    font-size: 3px;
-  }
-}
-@media only screen and (max-width: 226px) {
-  * {
-    font-size: 2.5px;
   }
 }
 
@@ -110,6 +80,7 @@ nav > * {
   box-sizing: border-box;
   outline: solid 0.8rem rgba(0, 0, 0, 0.5);
   outline-offset: -0.8em;
+  background: linear-gradient(90deg, papayawhip 0%, white 33%, white 67%, papayawhip 100%);
   box-shadow: inset 0.6rem 0.6rem 1.2rem rgba(0, 0, 0, 0.25), 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.25);
   margin-top: 1rem;
 }
@@ -126,13 +97,6 @@ nav > * {
   margin-top: unset;
   width: unset;
   margin-bottom: unset;
-  transform: skew(4deg, 0deg);
-  transition: 0.08s;
-  animation-timing-function: ease-out;
-}
-.skewbox div, .skewbox-title div {
-  z-index: -1;
-  transform: skew(-4deg, 0deg);
 }
 
 .skewbox-pic {
@@ -154,20 +118,29 @@ a.skewbox, a.skewbox-title {
 }
 
 .skewbox-title {
+  width: 95%;
   flex: 0 1 auto;
   margin: 0;
   margin-bottom: -0.8rem;
   transform-style: preserve-3d;
   transition: initial;
   animation-timing-function: initial;
-  transform: rotateX(-30deg);
+  transform: unset;
+  transform: rotateX(-20deg);
+  justify-content: center;
 }
 .skewbox-title div {
+  transform: unset;
   margin-left: 3em;
   margin-right: 3em;
 }
 .skewbox-title h1 {
-  font-size: 7.5rem;
+  font-family: "Sancreek", serif;
+  font-size: 10em;
+}
+
+.container.blog, .blog.footer-container, .blog.header-container {
+  flex-direction: column;
 }
 
 .footer {
@@ -179,6 +152,12 @@ a.skewbox, a.skewbox-title {
   width: 100%;
   justify-content: space-around;
   align-items: flex-end;
+}
+@media only screen and (max-width: 512px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .footer a {
   text-decoration: none;
@@ -195,7 +174,7 @@ a.skewbox, a.skewbox-title {
 @media (min-aspect-ratio: 5/4) {
   .container, .footer-container, .header-container {
     display: flex;
-    flex: 1 1 100%;
+    flex: 1 1 0%;
     width: 90vw;
     flex-direction: row;
     align-items: stretch;
@@ -205,8 +184,8 @@ a.skewbox, a.skewbox-title {
   }
   .container .skewbox, .footer-container .skewbox, .header-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
     transform: skew(0deg, 1.5deg);
-    margin-left: 1rem;
     flex-direction: column;
+    align-items: center;
   }
   .container .skewbox h1, .footer-container .skewbox h1, .header-container .skewbox h1, .container .skewbox-title h1, .footer-container .skewbox-title h1, .header-container .skewbox-title h1 {
     font-family: "Six Caps", sans-serif;
@@ -217,12 +196,12 @@ a.skewbox, a.skewbox-title {
   }
   .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
     transform: unset;
-    margin-bottom: 1.5rem;
     transform: rotateX(-20deg);
+    margin-bottom: 1.5rem;
   }
   .container .skewbox-title h1, .footer-container .skewbox-title h1, .header-container .skewbox-title h1 {
-    font-family: "Sancreek", serif;
     font-size: 10em;
+    font-family: "Sancreek", serif;
   }
   .container .skewbox-title div, .footer-container .skewbox-title div, .header-container .skewbox-title div {
     transform: unset;
@@ -235,32 +214,8 @@ a.skewbox, a.skewbox-title {
   .container .skewbox:nth-of-type(2n) div, .footer-container .skewbox:nth-of-type(2n) div, .header-container .skewbox:nth-of-type(2n) div, .container .skewbox-title:nth-of-type(2n) div, .footer-container .skewbox-title:nth-of-type(2n) div, .header-container .skewbox-title:nth-of-type(2n) div {
     transform: skew(0deg, 1.5deg);
   }
-  .container .skewbox:hover, .footer-container .skewbox:hover, .header-container .skewbox:hover, .container .skewbox-title:hover, .footer-container .skewbox-title:hover, .header-container .skewbox-title:hover {
-    padding: 0.67rem;
-    margin-left: 0.33rem;
-    margin-right: -0.67rem;
-  }
-  .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
-    width: 95%;
-    justify-content: center;
-    transform: unset;
-    margin-bottom: 1.5rem;
-    transform: rotateX(-20deg);
-  }
-  .container .skewbox-title h1, .footer-container .skewbox-title h1, .header-container .skewbox-title h1 {
-    font-family: "Sancreek", serif;
-    font-size: 10em;
-  }
-  .container .skewbox-title div, .footer-container .skewbox-title div, .header-container .skewbox-title div {
-    transform: unset;
-  }
-  .container .skewbox-title:hover, .footer-container .skewbox-title:hover, .header-container .skewbox-title:hover {
-    padding: 0;
-    margin-top: unset;
-    margin-bottom: 1.5rem;
-  }
 }
-@media (max-aspect-ratio: 5/4) and (max-aspect-ratio: 320/568) {
+@media (max-aspect-ratio: 5/4) and (max-aspect-ratio: 9/16) {
   h1 {
     font-family: "Six Caps", sans-serif;
     font-size: 13em;
@@ -275,8 +230,19 @@ a.skewbox, a.skewbox-title {
     align-items: center;
   }
   .container .skewbox, .footer-container .skewbox, .header-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
+    padding: 1rem;
+    flex: 1 1 100%;
     width: 100%;
     margin-top: 1rem;
+    flex-direction: row;
+    align-items: center;
+    transform: skew(4deg, 0deg);
+    transition: 0.08s;
+    animation-timing-function: ease-out;
+  }
+  .container .skewbox div, .footer-container .skewbox div, .header-container .skewbox div, .container .skewbox-title div, .footer-container .skewbox-title div, .header-container .skewbox-title div {
+    z-index: -1;
+    transform: skew(-4deg, 0deg);
   }
   .container .skewbox:nth-of-type(2n), .footer-container .skewbox:nth-of-type(2n), .header-container .skewbox:nth-of-type(2n), .container .skewbox-title:nth-of-type(2n), .footer-container .skewbox-title:nth-of-type(2n), .header-container .skewbox-title:nth-of-type(2n) {
     transform: skew(-4deg, 0deg);
@@ -285,29 +251,14 @@ a.skewbox, a.skewbox-title {
   .container .skewbox:nth-of-type(2n) div, .footer-container .skewbox:nth-of-type(2n) div, .header-container .skewbox:nth-of-type(2n) div, .container .skewbox-title:nth-of-type(2n) div, .footer-container .skewbox-title:nth-of-type(2n) div, .header-container .skewbox-title:nth-of-type(2n) div {
     transform: skew(4deg, 0deg);
   }
-  .container .skewbox:hover, .footer-container .skewbox:hover, .header-container .skewbox:hover, .container .skewbox-title:hover, .footer-container .skewbox-title:hover, .header-container .skewbox-title:hover {
-    padding: 0.67rem;
-    margin-top: 0.33rem;
-    margin-bottom: -0.67rem;
-  }
   .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
-    width: 95%;
-    justify-content: center;
-    transform: unset;
     margin-bottom: 0rem;
+    transform: unset;
     transform: rotateX(-20deg);
-  }
-  .container .skewbox-title h1, .footer-container .skewbox-title h1, .header-container .skewbox-title h1 {
-    font-family: "Sancreek", serif;
-    font-size: 10em;
+    margin-bottom: 1.5rem;
   }
   .container .skewbox-title div, .footer-container .skewbox-title div, .header-container .skewbox-title div {
     transform: unset;
-  }
-  .container .skewbox-title:hover, .footer-container .skewbox-title:hover, .header-container .skewbox-title:hover {
-    padding: 0;
-    margin-top: 1rem;
-    margin-bottom: 0;
   }
   .container .skewbox-link, .footer-container .skewbox-link, .header-container .skewbox-link {
     flex-direction: column;
@@ -333,12 +284,13 @@ a.skewbox, a.skewbox-title {
 }
 .thickborderbox p.p, .gradbox p.p, .skewbox p.p, .skewbox-title p.p {
   font-size: 2.2rem;
-  margin: 2rem 3rem 0 3rem;
+  margin: 0rem 3rem 0 3rem;
   text-indent: 4rem;
 }
 
 .header-container {
-  width: 100vw;
+  box-sizing: border-box;
+  width: 95vw;
   align-items: center;
   justify-content: center;
   background-color: unset;
@@ -346,13 +298,16 @@ a.skewbox, a.skewbox-title {
   perspective: 200rem;
 }
 .header-container .gradbox, .header-container .skewbox, .header-container .skewbox-title {
-  flex: 1;
+  flex: 1 0 auto;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: fit-content;
+  padding-right: 2rem;
 }
 .header-container .gradbox .h1, .header-container .skewbox .h1, .header-container .skewbox-title .h1 {
   font-size: 6rem;
-  margin: 0 0 0 3rem;
+  margin: 0 0 0 2rem;
 }
 .header-container .gradbox .p, .header-container .skewbox .p, .header-container .skewbox-title .p {
   margin: 0;
@@ -361,6 +316,11 @@ a.skewbox, a.skewbox-title {
   font-size: 2rem;
   color: papayawhip;
   margin: 0 0 0 2rem;
+}
+.header-container .gradbox div, .header-container .skewbox div, .header-container .skewbox-title div {
+  display: flex;
+  min-height: 5rem;
+  align-items: center;
 }
 .header-container .skewbox-title {
   justify-content: center;
@@ -373,6 +333,7 @@ a.skewbox, a.skewbox-title {
 }
 
 .outer {
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;

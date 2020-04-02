@@ -31,30 +31,27 @@ $root-font-size: 10px;
     // my phone - 4.7" 1080p
     font-size: 5px;
   }
-  @media only screen and (max-width: 792px) {
+  @media only screen and (max-width: 810px) {
     font-size: 9px;
   }
   @media only screen and (max-width: 675px) {
     font-size: 8px;
   }
-  @media only screen and (max-width: 610px) {
-    font-size: 7px;
-  }
-  @media only screen and (max-width: 533px) {
-    font-size: 6px;
-  }
-  @media only screen and (max-width: 454px) {
-    font-size: 5px;
-  }
-  @media only screen and (max-width: 376px) {
-    font-size: 4px;
-  }
-  @media only screen and (max-width: 308px) {
-    font-size: 3px;
-  }
-  @media only screen and (max-width: 226px) {
-    font-size: 2.5px;
-  }
+  // @media only screen and (max-width: 533px) {
+  //   font-size: 6px;
+  // }
+  // @media only screen and (max-width: 454px) {
+  //   font-size: 5px;
+  // }
+  // @media only screen and (max-width: 376px) {
+  //   font-size: 4px;
+  // }
+  // @media only screen and (max-width: 308px) {
+  //   font-size: 3px;
+  // }
+  // @media only screen and (max-width: 226px) {
+  //   font-size: 2.5px;
+  // }
 
   text-decoration: none;
   margin: 0;
@@ -119,27 +116,30 @@ nav {
   }
   p.p {
     font-size: 2.2rem;
-    margin: 2rem 3rem 0 3rem;
+    margin: 0rem 3rem 0 3rem;
     text-indent: 4rem;
   }
 }
 
 .header-container {
   @extend .container;
-  width: 100vw;
+  box-sizing: border-box;
+  width: 95vw;
   align-items: center;
   justify-content: center;
   background-color: unset;
   flex: 0 1 0%;
   perspective: 200rem;
   .gradbox {
-    flex: 1;
+    flex: 1 0 auto;
     align-items: center;
-    justify-content: flex-start;
-
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: fit-content;
+    padding-right: 2rem;
     .h1 {
       font-size: 6rem;
-      margin: 0 0 0 3rem;
+      margin: 0 0 0 2rem;
     }
     .p {
       margin: 0;
@@ -148,6 +148,11 @@ nav {
       font-size: 2rem;
       color: papayawhip;
       margin: 0 0 0 2rem;
+    }
+    div {
+      display: flex;
+      min-height: 5rem;
+      align-items: center;
     }
   }
   .skewbox-title {
@@ -162,7 +167,9 @@ nav {
 }
 
 .outer {
+  margin: 0;
   display: flex;
+  // box-sizing: border-box;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
@@ -185,3 +192,4 @@ nav {
     background-image: url("../assets/il-cattivo.svg");
   }
 }
+
