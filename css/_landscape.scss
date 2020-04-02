@@ -43,4 +43,7 @@ $skew-degrees: 1.5deg;
       transform: skew(0deg, $skew-degrees);
     }
   }
+  .skewbox-link {
+    flex-direction: column;
+  }
 }

@@ -119,7 +119,6 @@ a.skewbox, a.skewbox-title {
 
 .skewbox-link {
   display: flex;
-  align-items: flex-start;
   flex: 1 1 15rem;
 }
 
@@ -177,7 +176,6 @@ img.screenshot {
   max-height: 30rem;
   display: flex;
   flex: 0 1 0%;
-  background: red;
   object-fit: contain;
 }
 
@@ -253,6 +251,9 @@ img.screenshot {
   }
   .container .skewbox:nth-of-type(2n) div, .footer-container .skewbox:nth-of-type(2n) div, .header-container .skewbox:nth-of-type(2n) div, .container .skewbox-title:nth-of-type(2n) div, .footer-container .skewbox-title:nth-of-type(2n) div, .header-container .skewbox-title:nth-of-type(2n) div {
     transform: skew(0deg, 1.5deg);
+  }
+  .container .skewbox-link, .footer-container .skewbox-link, .header-container .skewbox-link {
+    flex-direction: column;
   }
 }
 @media (max-aspect-ratio: 5/4) and (max-aspect-ratio: 9/16) {
@@ -339,7 +340,9 @@ img.screenshot {
   font-family: "Sen", sans-serif;
   font-size: 2rem;
   color: papayawhip;
-  margin-right: 2rem;
+}
+.blog p {
+  text-align: center;
 }
 
 .linkbox .blog {
@@ -417,6 +420,10 @@ img.screenshot {
 }
 .skewbox:nth-child(3n) .skewbox-pic, .skewbox-title:nth-child(3n) .skewbox-pic {
   background-image: url("../assets/il-cattivo.svg");
+}
+
+a {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -132,10 +132,12 @@ nav {
   }
 }
 .blog {
-    font-family: 'Sen', sans-serif;
-    font-size: 2rem;
-    color: papayawhip;
-    margin-right: 2rem;
+  font-family: 'Sen', sans-serif;
+  font-size: 2rem;
+  color: papayawhip;
+  p {
+    text-align: center;
+  }
 }
 
 .linkbox .blog {
@@ -205,7 +207,7 @@ nav {
   }
   &:nth-child(2n) .skewbox-link {
   align-items: flex-end;
-  }
+  }  
   &:nth-child(3n-2) .skewbox-pic {
     background-image: url("../assets/il-buono.svg");
   }
@@ -216,3 +218,12 @@ nav {
     background-image: url("../assets/il-cattivo.svg");
   }
 }
+a {
+  display: block;
+}
+// below lines are useful for brute-force debugging layout
+// background: red;
+// align-self: center !important;
+// justify-self: center !important;
+// align-items: center !important;
+// justify-content: center !important;

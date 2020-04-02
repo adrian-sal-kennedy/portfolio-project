@@ -42,7 +42,6 @@ a.skewbox {
 }
 .skewbox-link {
   display: flex;
-  align-items: flex-start;
   flex: 1 1 15rem;
 }
 .skewbox-title {
@@ -99,8 +98,5 @@ img.screenshot {
   max-height: 30rem;
   display: flex;
   flex: 0 1 0%;
-  background: red;
   object-fit: contain;
-  // align-items: center;
-  // justify-content: center;
 }
