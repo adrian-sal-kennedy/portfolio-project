@@ -21,7 +21,8 @@ $skew-degrees: 4deg;
     transform: skew($skew-degrees, 0deg);
     transition: 0.08s;
     animation-timing-function: ease-out;
-    div {
+    div,img {
+      display: block;
       z-index: -1;
       transform: skew(-$skew-degrees, 0deg);
     }

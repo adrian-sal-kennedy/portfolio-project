@@ -38,6 +38,11 @@
   }
 }
 
+p {
+  font-family: "Sen", sans-serif;
+  font-size: 2rem;
+}
+
 h1, .h1 {
   display: block;
   font-family: "Sancreek", serif;
@@ -70,7 +75,7 @@ nav > * {
   margin: 0 0rem 0 3rem;
 }
 
-.thickborderbox, .gradbox, .skewbox, .skewbox-title, a.skewbox-title, a.skewbox {
+.thickborderbox, .gradbox, .linkbox, .skewbox, .skewbox-title, a.skewbox-title, a.skewbox {
   contain: paint;
   display: flex;
   flex-direction: column;
@@ -85,7 +90,7 @@ nav > * {
   margin-top: 1rem;
 }
 
-.gradbox, .skewbox, .skewbox-title, a.skewbox-title, a.skewbox {
+.gradbox, .linkbox, .skewbox, .skewbox-title, a.skewbox-title, a.skewbox {
   flex-direction: unset;
   margin-left: unset;
   outline: solid 0.8rem black;
@@ -141,6 +146,38 @@ a.skewbox, a.skewbox-title {
 
 .container.blog, .blog.footer-container, .blog.header-container {
   flex-direction: column;
+  width: 90%;
+}
+
+.container.pics, .pics.footer-container, .pics.header-container {
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem;
+}
+
+.linkbox {
+  height: 35rem;
+  display: flex;
+  flex: 0 1 0%;
+  flex-direction: column;
+  justify-content: center;
+  outline: solid 0.4em black;
+  outline-offset: -0.4em;
+  padding: 0.4em;
+  margin: 1rem;
+}
+
+img.screenshot {
+  max-width: 30rem;
+  max-height: 30rem;
+  display: flex;
+  flex: 0 1 0%;
+  background: red;
+  object-fit: contain;
 }
 
 .footer {
@@ -179,7 +216,7 @@ a.skewbox, a.skewbox-title {
     flex-direction: row;
     align-items: stretch;
   }
-  .container .thickborderbox, .footer-container .thickborderbox, .header-container .thickborderbox, .container .gradbox, .footer-container .gradbox, .header-container .gradbox, .container .skewbox, .footer-container .skewbox, .header-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
+  .container .thickborderbox, .footer-container .thickborderbox, .header-container .thickborderbox, .container .gradbox, .footer-container .gradbox, .header-container .gradbox, .container .skewbox, .footer-container .skewbox, .header-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title, .container .linkbox, .footer-container .linkbox, .header-container .linkbox {
     margin-left: 1rem;
   }
   .container .skewbox, .footer-container .skewbox, .header-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
@@ -191,7 +228,9 @@ a.skewbox, a.skewbox-title {
     font-family: "Six Caps", sans-serif;
     font-size: 10em;
   }
-  .container .skewbox div, .footer-container .skewbox div, .header-container .skewbox div, .container .skewbox-title div, .footer-container .skewbox-title div, .header-container .skewbox-title div {
+  .container .skewbox div, .footer-container .skewbox div, .header-container .skewbox div, .container .skewbox-title div, .footer-container .skewbox-title div, .header-container .skewbox-title div, .container .skewbox img, .footer-container .skewbox img, .header-container .skewbox img, .container .skewbox-title img, .footer-container .skewbox-title img, .header-container .skewbox-title img {
+    display: block;
+    z-index: -1;
     transform: skew(0deg, -1.5deg);
   }
   .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
@@ -240,7 +279,8 @@ a.skewbox, a.skewbox-title {
     transition: 0.08s;
     animation-timing-function: ease-out;
   }
-  .container .skewbox div, .footer-container .skewbox div, .header-container .skewbox div, .container .skewbox-title div, .footer-container .skewbox-title div, .header-container .skewbox-title div {
+  .container .skewbox div, .footer-container .skewbox div, .header-container .skewbox div, .container .skewbox-title div, .footer-container .skewbox-title div, .header-container .skewbox-title div, .container .skewbox img, .footer-container .skewbox img, .header-container .skewbox img, .container .skewbox-title img, .footer-container .skewbox-title img, .header-container .skewbox-title img {
+    display: block;
     z-index: -1;
     transform: skew(-4deg, 0deg);
   }
@@ -265,11 +305,11 @@ a.skewbox, a.skewbox-title {
     align-items: flex-start;
   }
 }
-.thickborderbox, .gradbox, .skewbox, a.skewbox, .skewbox-title, a.skewbox-title {
+.thickborderbox, .gradbox, .skewbox, a.skewbox, .skewbox-title, a.skewbox-title, .linkbox {
   align-items: flex-start;
   justify-content: flex-start;
 }
-.thickborderbox p.p, .gradbox p.p, .skewbox p.p, .skewbox-title p.p, .thickborderbox h1.p, .gradbox h1.p, .skewbox h1.p, .skewbox-title h1.p, .thickborderbox h2.p, .gradbox h2.p, .skewbox h2.p, .skewbox-title h2.p, .thickborderbox h3.p, .gradbox h3.p, .skewbox h3.p, .skewbox-title h3.p {
+.thickborderbox p.p, .gradbox p.p, .skewbox p.p, .skewbox-title p.p, .linkbox p.p, .thickborderbox h1.p, .gradbox h1.p, .skewbox h1.p, .skewbox-title h1.p, .linkbox h1.p, .thickborderbox h2.p, .gradbox h2.p, .skewbox h2.p, .skewbox-title h2.p, .linkbox h2.p, .thickborderbox h3.p, .gradbox h3.p, .skewbox h3.p, .skewbox-title h3.p, .linkbox h3.p {
   display: block;
   font-family: "Sen", sans-serif;
   font-size: 3.5rem;
@@ -282,16 +322,29 @@ a.skewbox, a.skewbox-title {
   margin: 2rem 2rem 0 2rem;
   padding-bottom: 2rem;
 }
-.thickborderbox h2.p, .gradbox h2.p, .skewbox h2.p, .skewbox-title h2.p {
+.thickborderbox h2.p, .gradbox h2.p, .skewbox h2.p, .skewbox-title h2.p, .linkbox h2.p {
   font-size: 2.8rem;
 }
-.thickborderbox h3.p, .gradbox h3.p, .skewbox h3.p, .skewbox-title h3.p {
+.thickborderbox h3.p, .gradbox h3.p, .skewbox h3.p, .skewbox-title h3.p, .linkbox h3.p {
   font-size: 2.5rem;
 }
-.thickborderbox p.p, .gradbox p.p, .skewbox p.p, .skewbox-title p.p {
+.thickborderbox p.p, .gradbox p.p, .skewbox p.p, .skewbox-title p.p, .linkbox p.p {
   font-size: 2.2rem;
   margin: 0rem 3rem 0 3rem;
   text-indent: 2rem;
+}
+
+.blog {
+  font-family: "Sen", sans-serif;
+  font-size: 2rem;
+  color: papayawhip;
+}
+
+.linkbox .blog {
+  align-self: center;
+  justify-self: center;
+  margin: 1rem;
+  flex: 1 0 auto;
 }
 
 .header-container {
@@ -303,7 +356,7 @@ a.skewbox, a.skewbox-title {
   flex: 0 1 0%;
   perspective: 200rem;
 }
-.header-container .gradbox, .header-container .skewbox, .header-container .skewbox-title {
+.header-container .gradbox, .header-container .skewbox, .header-container .skewbox-title, .header-container .linkbox {
   flex: 1 0 auto;
   align-items: center;
   justify-content: center;
@@ -311,11 +364,11 @@ a.skewbox, a.skewbox-title {
   min-height: fit-content;
   padding-right: 2rem;
 }
-.header-container .gradbox .h1, .header-container .skewbox .h1, .header-container .skewbox-title .h1 {
+.header-container .gradbox .h1, .header-container .skewbox .h1, .header-container .skewbox-title .h1, .header-container .linkbox .h1 {
   font-size: 6rem;
   margin: 0 0 0 2rem;
 }
-.header-container .gradbox .p, .header-container .skewbox .p, .header-container .skewbox-title .p {
+.header-container .gradbox .p, .header-container .skewbox .p, .header-container .skewbox-title .p, .header-container .linkbox .p {
   margin: 0;
   display: block;
   font-family: "Sen", sans-serif;
@@ -323,7 +376,7 @@ a.skewbox, a.skewbox-title {
   color: papayawhip;
   margin: 0 0 0 2rem;
 }
-.header-container .gradbox div, .header-container .skewbox div, .header-container .skewbox-title div {
+.header-container .gradbox div, .header-container .skewbox div, .header-container .skewbox-title div, .header-container .linkbox div {
   display: flex;
   min-height: 5rem;
   align-items: center;

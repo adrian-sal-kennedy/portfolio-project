@@ -68,4 +68,38 @@ a.skewbox {
 }
 .container.blog {
   flex-direction: column;
+  width: 90%;
+}
+.container.pics {
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem;
+}
+.linkbox {
+  @extend .gradbox;
+  height: 35rem;
+  // width: 25rem;
+  display: flex;
+  flex: 0 1 0%;
+  flex-direction: column;
+  justify-content: center;
+  outline: solid 0.4em black;
+  outline-offset: -0.4em;
+  padding: 0.4em;
+  margin: 1rem;
+}
+img.screenshot {
+  // display: block;
+  max-width: 30rem;
+  max-height: 30rem;
+  display: flex;
+  flex: 0 1 0%;
+  background: red;
+  object-fit: contain;
+  // align-items: center;
+  // justify-content: center;
 }
