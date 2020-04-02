@@ -96,6 +96,7 @@ nav > * {
   outline: solid 0.8rem black;
   background: linear-gradient(90deg, #b83125 0%, #d83b2c 33%, #d83b2c 67%, #b83125 100%);
   margin-bottom: 2rem;
+  margin-right: 1rem;
 }
 
 .skewbox, .skewbox-title, a.skewbox-title, a.skewbox {
@@ -269,7 +270,7 @@ img.screenshot {
     align-items: center;
   }
   .container .skewbox, .footer-container .skewbox, .header-container .skewbox, .container .skewbox-title, .footer-container .skewbox-title, .header-container .skewbox-title {
-    padding: 1rem;
+    padding: 0.8rem;
     flex: 1 1 100%;
     width: 100%;
     margin-top: 1rem;
@@ -338,12 +339,14 @@ img.screenshot {
   font-family: "Sen", sans-serif;
   font-size: 2rem;
   color: papayawhip;
+  margin-right: 2rem;
 }
 
 .linkbox .blog {
   align-self: center;
   justify-self: center;
   margin: 1rem;
+  margin-right: 2;
   flex: 1 0 auto;
 }
 
